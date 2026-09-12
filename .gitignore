@@ -1,0 +1,21 @@
+﻿# Virtual Environment
+venv/
+env/
+.venv/
+
+# Raw Large Dataset (prevent committing 500MB raw Kaggle file)
+data/raw/
+
+# Cache & Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.cache/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env

@@ -1,0 +1,121 @@
+﻿# Intent Taxonomy for Amazon Customer Support AI Agent
+# Derived from real Customer Support on Twitter (AmazonHelp) dataset
+
+intents:
+  delivery_issue:
+    definition: "Customer is asking about the status of a delivery, reporting a late package, or stating tracking shows delivered but nothing was received."
+    inclusion_criteria:
+      - "Package has not arrived by expected date."
+      - "Tracking status says 'delivered' but customer was home and did not receive it."
+      - "Tracking is stuck at carrier / courier hub."
+      - "Inquiries regarding delivery time, carrier delays, or missing packages."
+    exclusion_criteria:
+      - "Customer received the package but items are broken or defective (use damaged_defective_item)."
+      - "Customer wants to cancel before shipment arrives (use cancellation_change_order)."
+    examples:
+      - "3 different people have given 3 different answers and I still don't have my order. Says delivered Saturday, was not, I was home all day"
+      - "why is my order at my local courier for the last 6 days and still hasnt been delivered to me?? Over 1 week late"
+      - "Item has not been delivered but tracking says it was handed to me over an hour ago... 2nd time this has happened."
+      - "delivery I paid for today,didnt arrive.why not?i paid enough for it.where is it??"
+      - "Where is my package? It was supposed to be here by 8 PM and now tracking says running late."
+      - "My parcel was marked as delivered to receptionist but I live in a private house!"
+
+  return_refund_status:
+    definition: "Customer is asking how to return an item, tracking an existing refund, or complaining about missing money from a return."
+    inclusion_criteria:
+      - "Customer returned an item and is asking when refund will appear."
+      - "Customer asking for return label, drop-off location, or pickup scheduling."
+      - "Customer demanding a refund for poor service, delivery fee, or returned product."
+    exclusion_criteria:
+      - "Customer asking why an unexpected charge appeared on their card (use account_prime_billing)."
+      - "Customer wants an immediate cancellation before dispatch (use cancellation_change_order)."
+    examples:
+      - "Already started the return. UPS gets it from my doorstep tomorrow. Order 111-5014070-4118645"
+      - "I returned my headphones two weeks ago and tracking shows received. Where is my refund?"
+      - "Can I return an opened electronics item within 30 days?"
+      - "Refund the delivery charge since it didn't arrive on guaranteed delivery date."
+      - "Still waiting on my refund for order #203-948271. When will it reflect in my bank?"
+      - "How do I print a return shipping label without a printer?"
+
+  damaged_defective_item:
+    definition: "Customer received an order that is broken, damaged, expired, defective, missing parts, or the completely wrong item."
+    inclusion_criteria:
+      - "Product arrived shattered, leaking, torn, or crushed."
+      - "Product does not turn on or is malfunctioning out of the box."
+      - "Package was delivered but the box was empty or missing items."
+      - "Received a completely different item from what was purchased."
+    exclusion_criteria:
+      - "Software or app troubleshooting on functioning hardware (use product_tech_support)."
+      - "Package has not arrived yet (use delivery_issue)."
+    examples:
+      - "Opened my package today and the glass bottle was completely shattered all over the clothes."
+      - "You sent me a size 8 shoe when I explicitly ordered size 11."
+      - "The brand new blender won't turn on even when plugged into different sockets. Defective out of the box."
+      - "Received my Amazon box but the seal was broken and the phone inside was missing!"
+      - "Food item arrived expired by 3 months. Can I get a replacement?"
+
+  cancellation_change_order:
+    definition: "Customer wants to cancel an order, modify quantity, or change the delivery address/payment method before shipment."
+    inclusion_criteria:
+      - "Requesting to cancel an accidental or unneeded order."
+      - "Attempting to change shipping address or delivery instructions."
+      - "Inquiring why an order cannot be cancelled through the app."
+    exclusion_criteria:
+      - "Cancelling a recurring Prime subscription (use account_prime_billing)."
+      - "Returning an item that has already arrived (use return_refund_status)."
+    examples:
+      - "I cant find the options to cancel or re-order? It says dispatching soon."
+      - "Can I change the delivery address for order #402-91823? I accidentally selected my old home."
+      - "I need to cancel my order immediately, placed it by mistake 5 minutes ago."
+      - "Please cancel shipment for the keyboard, I found it locally."
+      - "How do I change the payment card on an order that hasn't shipped yet?"
+
+  account_prime_billing:
+    definition: "Customer has issues with account security, login credentials, unauthorized charges, Prime membership billing, or gift cards."
+    inclusion_criteria:
+      - "Charged for Prime membership without consent or after trial expired."
+      - "Locked out of account, 2FA verification failing, password reset not sending."
+      - "Unrecognized transaction on bank statement from Amazon."
+      - "Gift card balance not showing or promo code not applying."
+    exclusion_criteria:
+      - "Asking for refund on a returned physical product (use return_refund_status)."
+      - "Defective physical product (use damaged_defective_item)."
+    examples:
+      - "I created a new email address for the Prime trial and forgot it. What can I do so I'm not charged?"
+      - "Why was I charged $119 for Amazon Prime today when I never signed up for auto-renew?"
+      - "My account has been locked for suspicious activity and I cannot access my Kindle books."
+      - "I see an Amazon charge on my credit card that nobody in my household authorized."
+      - "My gift card says already redeemed when I scratched off the pin just now."
+
+  product_tech_support:
+    definition: "Customer needs technical troubleshooting for Amazon devices (Echo, Kindle, FireStick) or digital services (Prime Video, Music, App)."
+    inclusion_criteria:
+      - "Echo / Alexa device not connecting to Wi-Fi or household accounts."
+      - "Fire TV stick stuck on reboot loop or app crashing."
+      - "Prime Video streaming errors, black screen, or subtitle sync issues."
+      - "Kindle ebook download failure or sync issues."
+    exclusion_criteria:
+      - "Physical hardware crushed or broken upon delivery (use damaged_defective_item)."
+      - "Account password/login lockout (use account_prime_billing)."
+    examples:
+      - "Bought an Echo Show and it wont recognize a single account in our household. WTF, guys?"
+      - "My Fire TV Stick keeps rebooting and showing black screen after the latest software update."
+      - "Prime video app keeps giving error code 7031 on Chrome browser."
+      - "Kindle Paperwhite screen is frozen on screensaver and holding power button for 40s does nothing."
+      - "Alexa cannot find my smart lights anymore even after reconnecting the skill."
+
+  feedback_complaint:
+    definition: "Customer expressing anger, frustration, or negative feedback regarding driver behavior, poor customer service, or general policies without an explicit immediate action requested."
+    inclusion_criteria:
+      - "Complaining about rude driver behavior, throwing packages, or blocked driveway."
+      - "Complaints about past representative conduct or broken promises."
+      - "Policy feedback (discounts, pre-order price guarantees, ads in Prime Video)."
+    exclusion_criteria:
+      - "Actionable specific order delay where customer asks where the package is (use delivery_issue)."
+      - "Actionable request for refund (use return_refund_status)."
+    examples:
+      - "Is it possible to prevent AMZL from delivering my packages moving forward? Stuff is either lost/stolen/broken EVERY time."
+      - "since when you stop giving 20% off videogame pre-orders (amazon prime members) im confused? why?"
+      - "Your delivery driver just threw my parcel over the 6 foot gate onto concrete and drove off!"
+      - "3rd time your customer service rep hung up on me. Absolutely disgraceful service."
+      - "Why are you adding commercials to Prime Video when we already pay a yearly subscription?"

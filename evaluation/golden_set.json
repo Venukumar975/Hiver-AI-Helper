@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "eval_001",
+    "conversation_id": "conv_1216764",
+    "customer_message": "UPS Surepost is the carrier",
+    "raw_customer_text": "@AmazonHelp UPS Surepost is the carrier",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_002",
+    "conversation_id": "conv_1049369",
+    "customer_message": "I would like to know status of my order and why it was delayed in the first place.",
+    "raw_customer_text": "@115850 @AmazonHelp I would like to know status of my order and why it was delayed in the first place.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_003",
+    "conversation_id": "conv_314404",
+    "customer_message": "my order 171-2460518-1290763 is delayed for more than 05 days. What is the use of having Prime Membership ? Even our local post office delivers fast.",
+    "raw_customer_text": "@AmazonHelp my order 171-2460518-1290763 is delayed for more than 05 days. What is the use of having Prime Membership ? Even our local post office delivers fast.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_004",
+    "conversation_id": "conv_563947",
+    "customer_message": "This was the latest tracking update. Shipped with AMZL US Tracking ID TBA581212838000 Saturday, December 2 5:07 PM A carrier delay has occurred Chicago, US 9:00 AM Out for delivery Chicago, US",
+    "raw_customer_text": "@AmazonHelp This was the latest tracking update. Shipped with AMZL US Tracking ID TBA581212838000 Saturday, December 2 5:07 PM A carrier delay has occurred Chicago, US 9:00 AM Out for delivery Chicago, US",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_005",
+    "conversation_id": "conv_18899",
+    "customer_message": "Yes.. we got after 1 week from estimated date and still waiting for installation",
+    "raw_customer_text": "@AmazonHelp Yes.. we got after 1 week from estimated date and still waiting for installation",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_006",
+    "conversation_id": "conv_1109535",
+    "customer_message": "why do amzl delivery drivers do this? Just leave it on top of the mat ffs.",
+    "raw_customer_text": "@AmazonHelp why do amzl delivery drivers do this? Just leave it on top of the mat ffs. https://t.co/MYH5L0brYV",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_007",
+    "conversation_id": "conv_1121762",
+    "customer_message": "I'm still waiting for a response, I have received no further communication. Please don't wait until the order is cancelled from your end to tell me that you cannot help now that it's cancelled.",
+    "raw_customer_text": "@AmazonHelp I'm still waiting for a response, I have received no further communication. Please don't wait until the order is cancelled from your end to tell me that you cannot help now that it's cancelled.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_008",
+    "conversation_id": "conv_1127260",
+    "customer_message": "pro tip: don’t call your carrier service after the god of messages when you can’t deliver messages",
+    "raw_customer_text": "@AmazonHelp pro tip: don’t call your carrier service after the god of messages when you can’t deliver messages",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_009",
+    "conversation_id": "conv_1263049",
+    "customer_message": "order is always marked as Undelivered. If it would be delayed i would have managed. but logistic parteer mark is Undiverable .",
+    "raw_customer_text": "@AmazonHelp order is always marked as Undelivered. If it would be delayed i would have managed. but logistic parteer mark is Undiverable .",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_010",
+    "conversation_id": "conv_1310613",
+    "customer_message": "Already emailed them. AMZL sucks Jess. So bad. So terrible. Every other delivery doesnt happen or goes somewhere else",
+    "raw_customer_text": "@426267 @115821 @AmazonHelp Already emailed them. AMZL sucks Jess. So bad. So terrible. Every other delivery doesnt happen or goes somewhere else",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_011",
+    "conversation_id": "conv_451904",
+    "customer_message": "That they need to check with the carrier and the delivery man about what happened with the delivery. And that would take three business days. Three business days? Really?",
+    "raw_customer_text": "@AmazonHelp That they need to check with the carrier and the delivery man about what happened with the delivery. And that would take three business days. Three business days? Really?",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_012",
+    "conversation_id": "conv_11605",
+    "customer_message": "Carrier: AMZL US, Tracking #: TBA516106123000",
+    "raw_customer_text": "@AmazonHelp Carrier: AMZL US, Tracking #: TBA516106123000",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_013",
+    "conversation_id": "conv_563943",
+    "customer_message": "My 2 day shipping is now delayed even further. Supposed to arrive Friday, Dec. 1. Still at my local post office apparently. Tracking says package forwarded to new address per customer request. I DID NOT REQUEST AN ADDRESS FORWARDING.",
+    "raw_customer_text": "@AmazonHelp My 2 day shipping is now delayed even further. Supposed to arrive Friday, Dec. 1. Still at my local post office apparently. Tracking says package forwarded to new address per customer request. I DID NOT REQUEST AN ADDRESS FORWARDING.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_014",
+    "conversation_id": "conv_1310610",
+    "customer_message": "Ship and sold from amazon. AMZL drivers suck here in north seattle though. Bunch of people who cannot read addresses or fail at driving",
+    "raw_customer_text": "@426267 @115821 @AmazonHelp Ship and sold from amazon. AMZL drivers suck here in north seattle though. Bunch of people who cannot read addresses or fail at driving",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_015",
+    "conversation_id": "conv_170973",
+    "customer_message": "It’s supposed to arrive today but says it will be delayed because it was sent to the wrong delivery center",
+    "raw_customer_text": "@AmazonHelp It’s supposed to arrive today but says it will be delayed because it was sent to the wrong delivery center",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_016",
+    "conversation_id": "conv_841246",
+    "customer_message": "Where is my order details in that its just your courier service details not even the name of product is visible let alone order number",
+    "raw_customer_text": "@AmazonHelp Where is my order details in that its just your courier service details not even the name of product is visible let alone order number",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_017",
+    "conversation_id": "conv_755116",
+    "customer_message": "That you’d make sure it was delivered next day. It wasn’t! Carrier coded handing to a person at desk. It was my detached house. No servant.",
+    "raw_customer_text": "@AmazonHelp That you’d make sure it was delivered next day. It wasn’t! Carrier coded handing to a person at desk. It was my detached house. No servant.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_018",
+    "conversation_id": "conv_478608",
+    "customer_message": "They just said it’s arrival has been delayed. Why it couldn’t get to Dover, NH from Chelmsford, MA in 2 days is beyond me, but now I have an unknown delivery date.",
+    "raw_customer_text": "@AmazonHelp They just said it’s arrival has been delayed. Why it couldn’t get to Dover, NH from Chelmsford, MA in 2 days is beyond me, but now I have an unknown delivery date.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_019",
+    "conversation_id": "conv_379912",
+    "customer_message": "Hi, I'm still waiting for my purchase number 408-3051320-116676. (France)",
+    "raw_customer_text": "@AmazonHelp Hi, I'm still waiting for my purchase number 408-3051320-116676. (France)",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_020",
+    "conversation_id": "conv_513551",
+    "customer_message": "why are packages being delayed in Paletine, IL?",
+    "raw_customer_text": "@AmazonHelp why are packages being delayed in Paletine, IL?",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_021",
+    "conversation_id": "conv_1358981",
+    "customer_message": "All they told me was the shipping was delayed and that’s it.",
+    "raw_customer_text": "@AmazonHelp All they told me was the shipping was delayed and that’s it.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_022",
+    "conversation_id": "conv_550570",
+    "customer_message": "And still waiting despite it saying 12 hours response time and filling it in 20hrs ago. From bad to worse. @118373",
+    "raw_customer_text": "@AmazonHelp And still waiting despite it saying 12 hours response time and filling it in 20hrs ago. From bad to worse. @118373",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_023",
+    "conversation_id": "conv_411894",
+    "customer_message": "Im still waiting for a rep to connect to me smh . it would only take a moment yea right.......",
+    "raw_customer_text": "@AmazonHelp Im still waiting for a rep to connect to me smh . it would only take a moment yea right.......",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_024",
+    "conversation_id": "conv_349407",
+    "customer_message": "ordered a game last Tuesday & it still hasnt arrived, its been delayed until the 11th without an explaination. Do you know why?",
+    "raw_customer_text": "@AmazonHelp ordered a game last Tuesday &amp; it still hasnt arrived, its been delayed until the 11th without an explaination. Do you know why?",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_025",
+    "conversation_id": "conv_390800",
+    "customer_message": "Yes, the estimated delivery date of my order has passed?",
+    "raw_customer_text": "@AmazonHelp Yes, the estimated delivery date of my order has passed?",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_026",
+    "conversation_id": "conv_1069897",
+    "customer_message": "Each of my last 7 Prime order have been delayed by at least 2 additional days, and any compensation I've been offered has been revoked.",
+    "raw_customer_text": "@AmazonHelp Each of my last 7 Prime order have been delayed by at least 2 additional days, and any compensation I've been offered has been revoked.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_027",
+    "conversation_id": "conv_888394",
+    "customer_message": "They both say Shipped with AMZL US. Amazon just switched to amazon delivery or something which I assume is a small local logistics company in Portland and they have older route planning software with out dated maps for their drivers. neighbors out here get wrong delivers now",
+    "raw_customer_text": "@AmazonHelp They both say Shipped with AMZL US. Amazon just switched to amazon delivery or something which I assume is a small local logistics company in Portland and they have older route planning software with out dated maps for their drivers. neighbors out here get wrong delivers now",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_028",
+    "conversation_id": "conv_319737",
+    "customer_message": "Done so already, point of this exchange was that I didn't hear back. Last contact was 5/10. Have sent again. Annoyed with delayed response.",
+    "raw_customer_text": "@AmazonHelp Done so already, point of this exchange was that I didn't hear back. Last contact was 5/10. Have sent again. Annoyed with delayed response.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_029",
+    "conversation_id": "conv_137116",
+    "customer_message": "I haven't received any email, there was a revised delivery date the first time it was delayed but not this time.",
+    "raw_customer_text": "@AmazonHelp I haven't received any email, there was a revised delivery date the first time it was delayed but not this time.",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_030",
+    "conversation_id": "conv_49126",
+    "customer_message": "2/2 carrier who delivered my previous item which i never received, to a random address. Will be disappointed if this happens again tomorrow",
+    "raw_customer_text": "@AmazonHelp 2/2 carrier who delivered my previous item which i never received, to a random address. Will be disappointed if this happens again tomorrow",
+    "gold_intent": "delivery_issue",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine delivery_issue query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_031",
+    "conversation_id": "conv_276146",
+    "customer_message": "plz update?still,i am facing issue with the phone. i hd raised a return request, technician verified but no response from Amazon",
+    "raw_customer_text": "@115850 @AmazonHelp plz update?still,i am facing issue with the phone. i hd raised a return request, technician verified but no response from Amazon",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_032",
+    "conversation_id": "conv_641729",
+    "customer_message": "see tweet above. Return me my money, deliver my goods I ordered and also return me the delivery fee your customer support thought they could sneak it to 'help' me!!! 😡",
+    "raw_customer_text": "@115830 @AmazonHelp see tweet above. Return me my money, deliver my goods I ordered and also return me the delivery fee your customer support thought they could sneak it to 'help' me!!! 😡",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_033",
+    "conversation_id": "conv_959300",
+    "customer_message": "As per ur email I hv added my bank account detail on 20/10 pls refund money",
+    "raw_customer_text": "@AmazonHelp As per ur email I hv added my bank account detail on 20/10 pls refund money",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_034",
+    "conversation_id": "conv_929250",
+    "customer_message": "Dear Amazon Team, I have already done the prescribed methods for return like email or call to customer care but every time getting the same message like resolve the issue within 48 hours but not yet resolved my issue after 8 days.",
+    "raw_customer_text": "@AmazonHelp Dear Amazon Team, I have already done the prescribed methods for return like email or call to customer care but every time getting the same message like resolve the issue within 48 hours but not yet resolved my issue after 8 days.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_035",
+    "conversation_id": "conv_898747",
+    "customer_message": "I received mail 2nd from Amazon that details are not correct. By Today EOD confirm the refund process.",
+    "raw_customer_text": "@AmazonHelp I received mail 2nd from Amazon that details are not correct. By Today EOD confirm the refund process.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_036",
+    "conversation_id": "conv_1320691",
+    "customer_message": "product reached to the center where is my refund ??",
+    "raw_customer_text": "@AmazonHelp @115850 product reached to the center where is my refund ?? https://t.co/sB40w0Pd7l",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_037",
+    "conversation_id": "conv_637224",
+    "customer_message": "Könnt ihr mir vielleicht eine Mailadresse geben? Sonst muss ich immer einen return anwählen, den ich ja eigentlich nicht machen kann?!",
+    "raw_customer_text": "@AmazonHelp Könnt ihr mir vielleicht eine Mailadresse geben? Sonst muss ich immer einen return anwählen, den ich ja eigentlich nicht machen kann?!",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_038",
+    "conversation_id": "conv_133845",
+    "customer_message": "I want to know the status. Am I going to get my money back? Or is it that you are going to keep sending the same kind of emails every time? #Pathetic #cheaters #worstcustomerserviceever @115851 @AmazonHelp @115821 @115850 @115830",
+    "raw_customer_text": "@AmazonHelp I want to know the status. Am I going to get my money back? Or is it that you are going to keep sending the same kind of emails every time? #Pathetic #cheaters #worstcustomerserviceever @115851 @AmazonHelp @115821 @115850 @115830",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_039",
+    "conversation_id": "conv_1192325",
+    "customer_message": "I have seen that.As the item has never left your side why delay the refund till its returned to your FC?This is unfair.Kindly refund ASAP.",
+    "raw_customer_text": "@AmazonHelp I have seen that.As the item has never left your side why delay the refund till its returned to your FC?This is unfair.Kindly refund ASAP.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_040",
+    "conversation_id": "conv_1232118",
+    "customer_message": "Dear Amazon, Why you mentioned in given add that faster refund of Amazon pay balance Within 24 hrs??? #amazonpay",
+    "raw_customer_text": "@AmazonHelp Dear Amazon, Why you mentioned in given add that faster refund of Amazon pay balance Within 24 hrs??? #amazonpay https://t.co/PFUqx8aZtB",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_041",
+    "conversation_id": "conv_734063",
+    "customer_message": "It has been 58 days now. No refund till now.",
+    "raw_customer_text": "@AmazonHelp It has been 58 days now. No refund till now.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_042",
+    "conversation_id": "conv_674261",
+    "customer_message": "please could you start a lost item for 3 items I sent as you have decided not to move my items from Tyneside and is out of the delivery timescale of 2-3 days! @AmazonHelp won’t go for lost item or refund me so you can!no wonder @147630 wants rm to be public owned",
+    "raw_customer_text": "@126705 please could you start a lost item for 3 items I sent as you have decided not to move my items from Tyneside and is out of the delivery timescale of 2-3 days! @AmazonHelp won’t go for lost item or refund me so you can!no wonder @147630 wants rm to be public owned",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_043",
+    "conversation_id": "conv_327591",
+    "customer_message": "The page only lets me get a refund, I need an exchange for a working one. It's a gift for a 3 year old, I can't take it out of his hands.",
+    "raw_customer_text": "@AmazonHelp The page only lets me get a refund, I need an exchange for a working one. It's a gift for a 3 year old, I can't take it out of his hands.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_044",
+    "conversation_id": "conv_124804",
+    "customer_message": "Yes, after phoning and fishing out that shipment went lost I was suggested to reorder and that they make a refund. Just don't understand why I have to do that and how it can happen that your currier is claiming a delivered status falsely.",
+    "raw_customer_text": "@AmazonHelp Yes, after phoning and fishing out that shipment went lost I was suggested to reorder and that they make a refund. Just don't understand why I have to do that and how it can happen that your currier is claiming a delivered status falsely.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_045",
+    "conversation_id": "conv_1148708",
+    "customer_message": "\"We believe the courier company has lost your item. Would you like a first class replacement or a full refund?\" No response since this Oct 5",
+    "raw_customer_text": "@AmazonHelp \"We believe the courier company has lost your item. Would you like a first class replacement or a full refund?\" No response since this Oct 5",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_046",
+    "conversation_id": "conv_480362",
+    "customer_message": "What I want to do is exchange it for the same one as it’s a birthday present, I can only see how to refund, though I have been lost on the internet before.",
+    "raw_customer_text": "@AmazonHelp What I want to do is exchange it for the same one as it’s a birthday present, I can only see how to refund, though I have been lost on the internet before.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_047",
+    "conversation_id": "conv_1331159",
+    "customer_message": "Now agn ur CS asking for 3 days time to return pk-up? Have u done a mistake to buy a ph frm u?What a rubbish service frm u",
+    "raw_customer_text": "@AmazonHelp @115850 @1840 Now agn ur CS asking for 3 days time to return pk-up? Have u done a mistake to buy a ph frm u?What a rubbish service frm u",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_048",
+    "conversation_id": "conv_149097",
+    "customer_message": "Can someone please tell me when this poxy collection will be happening. It's been sat outside my house waiting for stupid hermes to collect it so I can get my refund!!!!",
+    "raw_customer_text": "@AmazonHelp Can someone please tell me when this poxy collection will be happening. It's been sat outside my house waiting for stupid hermes to collect it so I can get my refund!!!!",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_049",
+    "conversation_id": "conv_1212705",
+    "customer_message": "Hi team time asked by u is over. Now return my money on priority or u people want me to file a case a cheating in the court.",
+    "raw_customer_text": "@AmazonHelp Hi team time asked by u is over. Now return my money on priority or u people want me to file a case a cheating in the court.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_050",
+    "conversation_id": "conv_111800",
+    "customer_message": "Dealing with worst customer service ever @AmazonHelp ,Did not receive a refund on items returned after weeks of going back and forth with customer service I spoke to a supervisor that straight up lied to me on my orders b careful shoppers @115851 #BlackFriday #Amazon #bitcoin",
+    "raw_customer_text": "Dealing with worst customer service ever @AmazonHelp ,Did not receive a refund on items returned after weeks of going back and forth with customer service I spoke to a supervisor that straight up lied to me on my orders b careful shoppers @115851 #BlackFriday #Amazon #bitcoin",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_051",
+    "conversation_id": "conv_18897",
+    "customer_message": "Yes.. not single call got regarding that since Saturday.. I want to return this products and never want to purchase again with amazon",
+    "raw_customer_text": "@AmazonHelp Yes.. not single call got regarding that since Saturday.. I want to return this products and never want to purchase again with amazon",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_052",
+    "conversation_id": "conv_73432",
+    "customer_message": "And if they won't be able to get it for me, will I be able to cancel the exchange request and put a request for a refund in?",
+    "raw_customer_text": "@AmazonHelp And if they won't be able to get it for me, will I be able to cancel the exchange request and put a request for a refund in?",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_053",
+    "conversation_id": "conv_833645",
+    "customer_message": "There is also no option to request a refund on items, only to return them. We can’t return items we didn’t receive.",
+    "raw_customer_text": "@AmazonHelp There is also no option to request a refund on items, only to return them. We can’t return items we didn’t receive.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_054",
+    "conversation_id": "conv_288030",
+    "customer_message": "Moreover i scheduled return for today btw 7am to 10am but there was no update at all. Just few minutes back its picked up.whats use of time?",
+    "raw_customer_text": "@AmazonHelp Moreover i scheduled return for today btw 7am to 10am but there was no update at all. Just few minutes back its picked up.whats use of time?",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_055",
+    "conversation_id": "conv_129707",
+    "customer_message": "Filled form a week ago.. haven't got any call or massage for return.. please help.. I need money back and return product",
+    "raw_customer_text": "@AmazonHelp Filled form a week ago.. haven't got any call or massage for return.. please help.. I need money back and return product",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_056",
+    "conversation_id": "conv_315219",
+    "customer_message": "they have now missed two promised dates. next they normally say they tried to deliver to an obvious business address out of hours & return.",
+    "raw_customer_text": "@AmazonHelp they have now missed two promised dates. next they normally say they tried to deliver to an obvious business address out of hours &amp; return.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_057",
+    "conversation_id": "conv_861305",
+    "customer_message": "I cancelled an order and never got my money back I have a screenshot to prove I cancelled it but the $ was never put back into my bank account? It said after 1 to 2 business days it's only been one day but my item never shipped I'm jw why it's taking so long? 😀",
+    "raw_customer_text": "@AmazonHelp I cancelled an order and never got my money back I have a screenshot to prove I cancelled it but the $ was never put back into my bank account? It said after 1 to 2 business days it's only been one day but my item never shipped I'm jw why it's taking so long? 😀",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_058",
+    "conversation_id": "conv_1346578",
+    "customer_message": "Did u ever got this sorted. except for the refund",
+    "raw_customer_text": "@AmazonHelp Did u ever got this sorted. except for the refund",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_059",
+    "conversation_id": "conv_283531",
+    "customer_message": "I ain't got time for doing this shit daily, I'm cancelling my COD orders and provide me refund for the order which I requested to replace.",
+    "raw_customer_text": "@AmazonHelp I ain't got time for doing this shit daily, I'm cancelling my COD orders and provide me refund for the order which I requested to replace.",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine return_refund_status query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_060",
+    "conversation_id": "conv_737984",
+    "customer_message": "such a bad experience to just return a product. My working hours were disturbed because of the delivery guy who kept calling me that he's reaching in 5 mins. #Pathetic. That's how you treat #amazonprime customers! #CustomerLast? @115851 @AmazonHelp",
+    "raw_customer_text": "@115821 @115850 such a bad experience to just return a product. My working hours were disturbed because of the delivery guy who kept calling me that he's reaching in 5 mins. #Pathetic. That's how you treat #amazonprime customers! #CustomerLast? @115851 @AmazonHelp",
+    "gold_intent": "return_refund_status",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_061",
+    "conversation_id": "conv_469695",
+    "customer_message": "Received damaged product @115850 @AmazonHelp Order no: 408-4604176-7386704",
+    "raw_customer_text": "Received damaged product @115850 @AmazonHelp Order no: 408-4604176-7386704 https://t.co/6pmYHWAbyo",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_062",
+    "conversation_id": "conv_1051164",
+    "customer_message": "The live chat is not working.",
+    "raw_customer_text": "@AmazonHelp The live chat is not working.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_063",
+    "conversation_id": "conv_1098617",
+    "customer_message": "Yes I am here is a screenshot, I noticed that the CSS formatting on the page is broken too, unlike the .com version of the site.",
+    "raw_customer_text": "@AmazonHelp Yes I am here is a screenshot, I noticed that the CSS formatting on the page is broken too, unlike the .com version of the site. https://t.co/9dZUuJETkI",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_064",
+    "conversation_id": "conv_843524",
+    "customer_message": "Not sure if it's damaged inside, I had to leave before I could check. I suspect not, just quite disappointed with the quality of the box",
+    "raw_customer_text": "@AmazonHelp Not sure if it's damaged inside, I had to leave before I could check. I suspect not, just quite disappointed with the quality of the box",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_065",
+    "conversation_id": "conv_382210",
+    "customer_message": "1)I am only expecting genuine non defective product. You disappointed me all three times.",
+    "raw_customer_text": "@AmazonHelp 1)I am only expecting genuine non defective product. You disappointed me all three times.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_066",
+    "conversation_id": "conv_224817",
+    "customer_message": "I have send the details . the basis .Beacuse my product is not working and I have to claim the product they are demanding the sales invoice",
+    "raw_customer_text": "@AmazonHelp I have send the details . the basis .Beacuse my product is not working and I have to claim the product they are demanding the sales invoice",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_067",
+    "conversation_id": "conv_345881",
+    "customer_message": "I'm fed off with my new Amazon fire stick,On Friday only I got it and from yesterday on wards it's not working",
+    "raw_customer_text": "@115821 @115850 @AmazonHelp I'm fed off with my new Amazon fire stick,On Friday only I got it and from yesterday on wards it's not working",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_068",
+    "conversation_id": "conv_1339867",
+    "customer_message": "Can your drivers not knock on the door instead of forcing parcels through my letter box? Parcel is now damaged 🙄",
+    "raw_customer_text": "@AmazonHelp Can your drivers not knock on the door instead of forcing parcels through my letter box? Parcel is now damaged 🙄",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_069",
+    "conversation_id": "conv_467527",
+    "customer_message": "Delivery personnel contact no. still not working. Item still not received. Only updates for future updates!",
+    "raw_customer_text": "@AmazonHelp Delivery personnel contact no. still not working. Item still not received. Only updates for future updates!",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_070",
+    "conversation_id": "conv_1043221",
+    "customer_message": "1st i didn't get my no cost emi Next i didn't get the product delivered on time even after paying prime cost 3rd the divice is not working",
+    "raw_customer_text": "@AmazonHelp 1st i didn't get my no cost emi Next i didn't get the product delivered on time even after paying prime cost 3rd the divice is not working",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_071",
+    "conversation_id": "conv_140943",
+    "customer_message": "Parcel did arrive but, box was really damaged thankfully id not ordered anything breakable or that would of been broken, delivery driver was rude and was knocking on next doors door 10 seconds after knocking on my door.",
+    "raw_customer_text": "@AmazonHelp Parcel did arrive but, box was really damaged thankfully id not ordered anything breakable or that would of been broken, delivery driver was rude and was knocking on next doors door 10 seconds after knocking on my door.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_072",
+    "conversation_id": "conv_462521",
+    "customer_message": "my item was broken when I received it yesterday! States no refunds? Why? Should I dispute the charge?",
+    "raw_customer_text": "@AmazonHelp my item was broken when I received it yesterday! States no refunds? Why? Should I dispute the charge?",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_073",
+    "conversation_id": "conv_223869",
+    "customer_message": "I hav bought redmi 4 from amazon. But it is not working frequently restarting. Very bad quality.",
+    "raw_customer_text": "@AmazonHelp I hav bought redmi 4 from amazon. But it is not working frequently restarting. Very bad quality.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_074",
+    "conversation_id": "conv_138154",
+    "customer_message": "Am I doing the right thing to get a replacement TV by having it returned? It turned up broken and I’m doing what the site says",
+    "raw_customer_text": "@AmazonHelp Am I doing the right thing to get a replacement TV by having it returned? It turned up broken and I’m doing what the site says",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_075",
+    "conversation_id": "conv_219173",
+    "customer_message": "tired to sign up using a Citibank card for 4 free months but not working",
+    "raw_customer_text": "@AmazonHelp tired to sign up using a Citibank card for 4 free months but not working",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_076",
+    "conversation_id": "conv_846841",
+    "customer_message": "The parcel had been delivered this morning, but had arrived damaged and empty with just loads of wrapping paper. This is why I am contacting",
+    "raw_customer_text": "@AmazonHelp The parcel had been delivered this morning, but had arrived damaged and empty with just loads of wrapping paper. This is why I am contacting",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_077",
+    "conversation_id": "conv_1144988",
+    "customer_message": "Its not working online. Is there I number I can call?",
+    "raw_customer_text": "@AmazonHelp Its not working online. Is there I number I can call?",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_078",
+    "conversation_id": "conv_1427964",
+    "customer_message": "Touch ID not working on iphone. Can’t order or get to customer service part of the app.",
+    "raw_customer_text": "@AmazonHelp Touch ID not working on iphone. Can’t order or get to customer service part of the app. https://t.co/XOAAw0MZL0",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_079",
+    "conversation_id": "conv_1167732",
+    "customer_message": "trying to place an order with amazon app. Not working. When I click “Buy Now” it flicks back to “Order Summary”. Any ideas?",
+    "raw_customer_text": "@AmazonHelp trying to place an order with amazon app. Not working. When I click “Buy Now” it flicks back to “Order Summary”. Any ideas?",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_080",
+    "conversation_id": "conv_422990",
+    "customer_message": "Order No 408-7356679-2151563 dt-6/10/17 Received broken wall clock.",
+    "raw_customer_text": "@AmazonHelp Order No 408-7356679-2151563 dt-6/10/17 Received broken wall clock.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_081",
+    "conversation_id": "conv_179082",
+    "customer_message": "Should I open the parcel and inspect the item first? Maybe only the parcel is damaged?",
+    "raw_customer_text": "@AmazonHelp Should I open the parcel and inspect the item first? Maybe only the parcel is damaged?",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_082",
+    "conversation_id": "conv_590815",
+    "customer_message": "The product wasn't damaged but that's not the point. Your #carriers are more worried about making money than maintaining package integrity. This is the \"update\" on our printer.",
+    "raw_customer_text": "@AmazonHelp The product wasn't damaged but that's not the point. Your #carriers are more worried about making money than maintaining package integrity. This is the \"update\" on our printer. https://t.co/ZBNlcHGrgZ",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_083",
+    "conversation_id": "conv_928315",
+    "customer_message": "I have spend 31k on a product and i get a defective one? @115850 @AmazonHelp & no replacement for it?",
+    "raw_customer_text": "I have spend 31k on a product and i get a defective one? @115850 @AmazonHelp &amp; no replacement for it? https://t.co/Rr1d7IHS8P",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_084",
+    "conversation_id": "conv_863862",
+    "customer_message": "Lol @AmazonHelp 2 step auth not working for seller central and I'm shut out of my account. Text code being input says invalid.",
+    "raw_customer_text": "Lol @AmazonHelp 2 step auth not working for seller central and I'm shut out of my account. Text code being input says invalid.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_085",
+    "conversation_id": "conv_1440642",
+    "customer_message": "how/where can I provide (packaging feedback)? I've received items that have been damaged, which could have been avoided.",
+    "raw_customer_text": "@AmazonHelp how/where can I provide (packaging feedback)? I've received items that have been damaged, which could have been avoided.",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_086",
+    "conversation_id": "conv_67443",
+    "customer_message": "I bought a product in July. It's now broken. But there's no option to get a replacement or raise a complaint. What do i do?? !!!",
+    "raw_customer_text": "@AmazonHelp I bought a product in July. It's now broken. But there's no option to get a replacement or raise a complaint. What do i do?? !!!",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_087",
+    "conversation_id": "conv_1310975",
+    "customer_message": "why are deliveries no longer made over weekends? Paid for Prime and now have to wait until following week for items, broken deal",
+    "raw_customer_text": "@AmazonHelp why are deliveries no longer made over weekends? Paid for Prime and now have to wait until following week for items, broken deal",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_088",
+    "conversation_id": "conv_1120406",
+    "customer_message": "Thanks @AmazonHelp for replacing my broken charger and fixing the issue in 5 mins! Y'all are the best!",
+    "raw_customer_text": "Thanks @AmazonHelp for replacing my broken charger and fixing the issue in 5 mins! Y'all are the best!",
+    "gold_intent": "damaged_defective_item",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine damaged_defective_item query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_089",
+    "conversation_id": "conv_737102",
+    "customer_message": "what assured, how long it will take?you guys offer a price on X day and later cancel it and saying it is seller price issue?what customer do",
+    "raw_customer_text": "@AmazonHelp what assured, how long it will take?you guys offer a price on X day and later cancel it and saying it is seller price issue?what customer do",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_090",
+    "conversation_id": "conv_377032",
+    "customer_message": "cancelled two orders on me, now both unavailable, been waiting months for them and got screwed.",
+    "raw_customer_text": "@AmazonHelp cancelled two orders on me, now both unavailable, been waiting months for them and got screwed.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_091",
+    "conversation_id": "conv_345100",
+    "customer_message": "I requested a cancellation on an order, I got an email that said it could not be cancelled from Amazon, then shop cancelled it for me.",
+    "raw_customer_text": "@AmazonHelp I requested a cancellation on an order, I got an email that said it could not be cancelled from Amazon, then shop cancelled it for me.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_092",
+    "conversation_id": "conv_727884",
+    "customer_message": "My order gt cancelled since it ws nt delivered. The reason4 nt takin delivry ws xchng phone wsn't rdy, since delivery arrived 1day advance.",
+    "raw_customer_text": "@AmazonHelp My order gt cancelled since it ws nt delivered. The reason4 nt takin delivry ws xchng phone wsn't rdy, since delivery arrived 1day advance.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_093",
+    "conversation_id": "conv_827558",
+    "customer_message": "I don't want to 'reach out' I want to cancel my order and my payment reimbursed asap! I've sent instruction via site. Awful service!",
+    "raw_customer_text": "@AmazonHelp I don't want to 'reach out' I want to cancel my order and my payment reimbursed asap! I've sent instruction via site. Awful service!",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_094",
+    "conversation_id": "conv_1170079",
+    "customer_message": "1. I placed order on 8oct2017 #Amazon #lie not on 25oct2017 2. Why you cancel my order after 17days #Amazonscam",
+    "raw_customer_text": "@AmazonHelp 1. I placed order on 8oct2017 #Amazon #lie not on 25oct2017 2. Why you cancel my order after 17days #Amazonscam https://t.co/6bQiZWkS9J",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_095",
+    "conversation_id": "conv_1380270",
+    "customer_message": "I have placed 3 orders none of them have delivered yet. I had to cancel it after waiting for a months See Order#__credit_card__",
+    "raw_customer_text": "@AmazonHelp I have placed 3 orders none of them have delivered yet. I had to cancel it after waiting for a months See Order#__credit_card__",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_096",
+    "conversation_id": "conv_1219163",
+    "customer_message": "I tried connecting. It says the order is dispatched. I m unable to cancel it.",
+    "raw_customer_text": "@AmazonHelp I tried connecting. It says the order is dispatched. I m unable to cancel it.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_097",
+    "conversation_id": "conv_313663",
+    "customer_message": "I'll cancel all my orders if not replaced by coming home😡😡😡 @115850 @115821 @AmazonHelp . And will never use @115850 . Depends on u now",
+    "raw_customer_text": "@118702 @115850 @AmazonHelp I'll cancel all my orders if not replaced by coming home😡😡😡 @115850 @115821 @AmazonHelp . And will never use @115850 . Depends on u now",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_098",
+    "conversation_id": "conv_923693",
+    "customer_message": "Order # 171-0131211-6979545, 403-8195232-5165100,403-4696915-8780328,403-1661725-9494718 .....some of the orders i had to cancel #amazon",
+    "raw_customer_text": "@AmazonHelp Order # 171-0131211-6979545, 403-8195232-5165100,403-4696915-8780328,403-1661725-9494718 .....some of the orders i had to cancel #amazon",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_099",
+    "conversation_id": "conv_1297363",
+    "customer_message": "Do you really understand?? After i cancelled the order i got this? still you need expanation from my side?",
+    "raw_customer_text": "@AmazonHelp Do you really understand?? After i cancelled the order i got this? still you need expanation from my side? https://t.co/a5kMOd2Us7",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_100",
+    "conversation_id": "conv_366011",
+    "customer_message": "Can I cancel it? No point in it arriving tomorrow.",
+    "raw_customer_text": "@AmazonHelp @AmazonHelp Can I cancel it? No point in it arriving tomorrow.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_101",
+    "conversation_id": "conv_656074",
+    "customer_message": "Hi AmazonHelp, I keep getting charged €2.99 per month for Prime Video despite my account saying I've no subscription. There is no way for me to cancel! Please advise or help.",
+    "raw_customer_text": "@AmazonHelp Hi AmazonHelp, I keep getting charged €2.99 per month for Prime Video despite my account saying I've no subscription. There is no way for me to cancel! Please advise or help.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_102",
+    "conversation_id": "conv_1087629",
+    "customer_message": "It's almost 10 days since writing to you guys on mail and Twitter.Still order nt cancelled.Big failure of Amazon & pathetic customer service",
+    "raw_customer_text": "@AmazonHelp It's almost 10 days since writing to you guys on mail and Twitter.Still order nt cancelled.Big failure of Amazon &amp; pathetic customer service",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_103",
+    "conversation_id": "conv_65740",
+    "customer_message": "Shared and I got reply too ,but it's like everyday story .me too will not cancel this time .let u People cancel my order",
+    "raw_customer_text": "@AmazonHelp Shared and I got reply too ,but it's like everyday story .me too will not cancel this time .let u People cancel my order",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_104",
+    "conversation_id": "conv_170992",
+    "customer_message": "I'm such a dummy. How do I cancel a cancel request? It said that it couldn't guarantee it could even be canceled",
+    "raw_customer_text": "@AmazonHelp I'm such a dummy. How do I cancel a cancel request? It said that it couldn't guarantee it could even be canceled",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_105",
+    "conversation_id": "conv_1298939",
+    "customer_message": "Is there a way to cancel my Amazon prime trial if my account has been locked?",
+    "raw_customer_text": "@AmazonHelp Is there a way to cancel my Amazon prime trial if my account has been locked?",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_106",
+    "conversation_id": "conv_1435742",
+    "customer_message": "Cancel Reason: Technical Problem Does tech prob mean you didn't want me to make my purchase at the sale price because it went up ten fold.",
+    "raw_customer_text": "@AmazonHelp Cancel Reason: Technical Problem Does tech prob mean you didn't want me to make my purchase at the sale price because it went up ten fold.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_107",
+    "conversation_id": "conv_347475",
+    "customer_message": "You guys randomly cancelled my orientation the day I showed up without any notice to myself or any other day 1’s :/ haven’t heard back yet",
+    "raw_customer_text": "@AmazonHelp You guys randomly cancelled my orientation the day I showed up without any notice to myself or any other day 1’s :/ haven’t heard back yet",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_108",
+    "conversation_id": "conv_235733",
+    "customer_message": "lightning deal selected &completed in 15mins price was different at checkout cancelled few transactions at checkout & retried no change 1/3",
+    "raw_customer_text": "@AmazonHelp lightning deal selected &amp;completed in 15mins price was different at checkout cancelled few transactions at checkout &amp; retried no change 1/3",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_109",
+    "conversation_id": "conv_1071040",
+    "customer_message": "Items has not been delivered yet but order status delivered. So cancelled the order#406-6371959-6391568. @AmazonHelp @115850",
+    "raw_customer_text": "Items has not been delivered yet but order status delivered. So cancelled the order#406-6371959-6391568. @AmazonHelp @115850 https://t.co/984O35pK4r",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_110",
+    "conversation_id": "conv_572925",
+    "customer_message": "They are not helping they only telling that this was price error so that your order cancelled but my friends order got delivered",
+    "raw_customer_text": "@AmazonHelp They are not helping they only telling that this was price error so that your order cancelled but my friends order got delivered",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_111",
+    "conversation_id": "conv_81755",
+    "customer_message": "Have shared the details. Please get it delivered by today or feel free to cancel the order.",
+    "raw_customer_text": "@AmazonHelp Have shared the details. Please get it delivered by today or feel free to cancel the order.",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_112",
+    "conversation_id": "conv_503497",
+    "customer_message": "I have accidentally put an order through and I cannot cancel it please can someone help? Thank you",
+    "raw_customer_text": "@AmazonHelp @115830 I have accidentally put an order through and I cannot cancel it please can someone help? Thank you",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_113",
+    "conversation_id": "conv_109954",
+    "customer_message": ".@AmazonHelp Genuinely just want to cancel my membership and never shop with you again at this point. None of my things come when they’re supposed to. What am I paying for?",
+    "raw_customer_text": ".@AmazonHelp Genuinely just want to cancel my membership and never shop with you again at this point. None of my things come when they’re supposed to. What am I paying for?",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_114",
+    "conversation_id": "conv_61041",
+    "customer_message": "even when i screwed up and forgot to cancel before my cc was charged for an additional year? (effective date was monday)",
+    "raw_customer_text": "@AmazonHelp even when i screwed up and forgot to cancel before my cc was charged for an additional year? (effective date was monday)",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_115",
+    "conversation_id": "conv_470102",
+    "customer_message": "Delivery of my Cyber Monday order to my hotel failed as @115821 driver claimed the business was closed. A hotel. At 4pm. @AmazonHelp I need this to arrive today or I'll be cancelling it",
+    "raw_customer_text": "Delivery of my Cyber Monday order to my hotel failed as @115821 driver claimed the business was closed. A hotel. At 4pm. @AmazonHelp I need this to arrive today or I'll be cancelling it",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_116",
+    "conversation_id": "conv_1046703",
+    "customer_message": "Time to make your delivery executive famous! Absolutely arrogant, rescheduled the delivery without contacting me, cancelled the order when specifically asked to deliver it the next day. Maybe you should do something about this. I want my product delivered today! 😑😤",
+    "raw_customer_text": "@AmazonHelp Time to make your delivery executive famous! Absolutely arrogant, rescheduled the delivery without contacting me, cancelled the order when specifically asked to deliver it the next day. Maybe you should do something about this. I want my product delivered today! 😑😤 https://t.co/CBra5CDh63",
+    "gold_intent": "cancellation_change_order",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine cancellation_change_order query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_117",
+    "conversation_id": "conv_956310",
+    "customer_message": "so i am paying my PRIME membership for my packages to be NOT DELIVERED on time??? Just canceled Prime.",
+    "raw_customer_text": "@AmazonHelp so i am paying my PRIME membership for my packages to be NOT DELIVERED on time??? Just canceled Prime.",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_118",
+    "conversation_id": "conv_1050455",
+    "customer_message": "PT 1 One again ordered a parcel on my prime account. Got a message from driver saying parcel will be delivered yesterday between 2pm-3pm. No delivery came, checked app and said had been delivered to someone called Garry nothing to do with me. Phoned up they apologise like always",
+    "raw_customer_text": "@AmazonHelp PT 1 One again ordered a parcel on my prime account. Got a message from driver saying parcel will be delivered yesterday between 2pm-3pm. No delivery came, checked app and said had been delivered to someone called Garry nothing to do with me. Phoned up they apologise like always",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_119",
+    "conversation_id": "conv_1002913",
+    "customer_message": "I have issues with subtitles out of sync on Prime Video, on browser and Android app, with almost all the videos. How to solve?",
+    "raw_customer_text": "@AmazonHelp I have issues with subtitles out of sync on Prime Video, on browser and Android app, with almost all the videos. How to solve?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_120",
+    "conversation_id": "conv_992331",
+    "customer_message": "Than says oh we extended Prime like that magically makes everything better when 3 different people can not tell me if I am getting an item for sure but expect me to just re buy it? Seriously?",
+    "raw_customer_text": "@AmazonHelp Than says oh we extended Prime like that magically makes everything better when 3 different people can not tell me if I am getting an item for sure but expect me to just re buy it? Seriously?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_121",
+    "conversation_id": "conv_1276119",
+    "customer_message": "All, be aware of recent Amazon prime membership charges directly applied by Amazon on your registered account with them.",
+    "raw_customer_text": "@AmazonHelp All, be aware of recent Amazon prime membership charges directly applied by Amazon on your registered account with them.",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_122",
+    "conversation_id": "conv_257136",
+    "customer_message": "It was to b delivrd today by end of the day but I got the msg that it wil b delivrd by Mon,I think dis is not a Justice for prime membership",
+    "raw_customer_text": "@AmazonHelp It was to b delivrd today by end of the day but I got the msg that it wil b delivrd by Mon,I think dis is not a Justice for prime membership https://t.co/Vna5dyoY0L",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_123",
+    "conversation_id": "conv_1230254",
+    "customer_message": "J’ai également le même problème, ma livraison a été décalé au 9 novembre alors que je suis membre Prime.",
+    "raw_customer_text": "@AmazonHelp @408540 J’ai également le même problème, ma livraison a été décalé au 9 novembre alors que je suis membre Prime.",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_124",
+    "conversation_id": "conv_977729",
+    "customer_message": "Change your gaeway many people have done a fraud in your amazon.in site by order amazon egv by hacked indian credit card",
+    "raw_customer_text": "@AmazonHelp Change your gaeway many people have done a fraud in your amazon.in site by order amazon egv by hacked indian credit card",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_125",
+    "conversation_id": "conv_561632",
+    "customer_message": "Says it was expected on Thursday and at the latest, today. Not sure why I'm paying for prime",
+    "raw_customer_text": "@AmazonHelp Says it was expected on Thursday and at the latest, today. Not sure why I'm paying for prime",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_126",
+    "conversation_id": "conv_1099792",
+    "customer_message": "Amazon promote Pantry under Prime but it's not Prime. Needs to be fixed. @amazonhelp",
+    "raw_customer_text": "Amazon promote Pantry under Prime but it's not Prime. Needs to be fixed. @amazonhelp https://t.co/aN7aypYuQE",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_127",
+    "conversation_id": "conv_695901",
+    "customer_message": "ordered on Tuesday for delivery quoted today, but the app says it won't arrive until tomorrow. Why am I paying for prime if prime delivery isn't actually happening?",
+    "raw_customer_text": "@AmazonHelp ordered on Tuesday for delivery quoted today, but the app says it won't arrive until tomorrow. Why am I paying for prime if prime delivery isn't actually happening?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_128",
+    "conversation_id": "conv_1429589",
+    "customer_message": "where is Outlander s3 ep6??? Meant to be up this morning on prime?",
+    "raw_customer_text": "@AmazonHelp where is Outlander s3 ep6??? Meant to be up this morning on prime?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_129",
+    "conversation_id": "conv_1353508",
+    "customer_message": "hi, i recieved an email about amazon prime which i dont have & was just wondering if u could tell me if it was real. Thanks",
+    "raw_customer_text": "@AmazonHelp hi, i recieved an email about amazon prime which i dont have &amp; was just wondering if u could tell me if it was real. Thanks https://t.co/9aVvu5omd2",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_130",
+    "conversation_id": "conv_865793",
+    "customer_message": "been a prime member for 3+ years. Repeated delivery issues every order. You're an embarrassment",
+    "raw_customer_text": "@AmazonHelp @115821 been a prime member for 3+ years. Repeated delivery issues every order. You're an embarrassment",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_131",
+    "conversation_id": "conv_866132",
+    "customer_message": "I received an email as a Prime Customer for £15 off an Amazon Fire Stick, but the promotional code WASN'T on it? Can you help?",
+    "raw_customer_text": "@AmazonHelp I received an email as a Prime Customer for £15 off an Amazon Fire Stick, but the promotional code WASN'T on it? Can you help?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_132",
+    "conversation_id": "conv_934300",
+    "customer_message": "A receipt of the gift card",
+    "raw_customer_text": "@AmazonHelp A receipt of the gift card",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_133",
+    "conversation_id": "conv_1328991",
+    "customer_message": "The wrong thing and three days late.. if that is prime service then I would hate to see what non-prime is.",
+    "raw_customer_text": "@AmazonHelp The wrong thing and three days late.. if that is prime service then I would hate to see what non-prime is.",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_134",
+    "conversation_id": "conv_349909",
+    "customer_message": "Yes I've got the app. I can't recall where I read it, think I'd just Googled free audible content and it ref'd to Prime. Is it correct?",
+    "raw_customer_text": "@AmazonHelp Yes I've got the app. I can't recall where I read it, think I'd just Googled free audible content and it ref'd to Prime. Is it correct?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_135",
+    "conversation_id": "conv_1379378",
+    "customer_message": "I've been waiting since yesterday. If what i ordered doesn't arrives today dn kindly keep it and pay me back my prime membership money.",
+    "raw_customer_text": "@AmazonHelp I've been waiting since yesterday. If what i ordered doesn't arrives today dn kindly keep it and pay me back my prime membership money.",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_136",
+    "conversation_id": "conv_929209",
+    "customer_message": "Yes.. and ur leadership team Suck.. i have the voice conversation.. that will also be posted soon #fraud #amazon #prime..",
+    "raw_customer_text": "@AmazonHelp Yes.. and ur leadership team Suck.. i have the voice conversation.. that will also be posted soon #fraud #amazon #prime..",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_137",
+    "conversation_id": "conv_1373642",
+    "customer_message": "Sold by Amazon CA, not market seller. B072V8MMX7. List was 99.99 in June 27, Prime savings 20.00. List price dropped to 79.89. Lost Pr Svgs",
+    "raw_customer_text": "@AmazonHelp Sold by Amazon CA, not market seller. B072V8MMX7. List was 99.99 in June 27, Prime savings 20.00. List price dropped to 79.89. Lost Pr Svgs",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_138",
+    "conversation_id": "conv_1266454",
+    "customer_message": "I signed up to the Amazon Prime Free Trial, which was suppose to be 'free' but my bank account has been charged? What gives?",
+    "raw_customer_text": "@AmazonHelp I signed up to the Amazon Prime Free Trial, which was suppose to be 'free' but my bank account has been charged? What gives?",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_139",
+    "conversation_id": "conv_1409552",
+    "customer_message": "who do I contact about getting charged for a amazon prime membership when I never signed up for it so now I'm out 89 dollars",
+    "raw_customer_text": "@AmazonHelp who do I contact about getting charged for a amazon prime membership when I never signed up for it so now I'm out 89 dollars",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_140",
+    "conversation_id": "conv_926695",
+    "customer_message": "Subtitles not being downloaded, but able to view while watching online. Why? SUPERNATURAL @ AMAZON PRIME",
+    "raw_customer_text": "@AmazonHelp @115850 Subtitles not being downloaded, but able to view while watching online. Why? SUPERNATURAL @ AMAZON PRIME",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_141",
+    "conversation_id": "conv_234201",
+    "customer_message": "You guys should be ashamed of yourselves for fooling people like this. Not gonna renew the prime membership or order anything ever again",
+    "raw_customer_text": "@AmazonHelp You guys should be ashamed of yourselves for fooling people like this. Not gonna renew the prime membership or order anything ever again",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_142",
+    "conversation_id": "conv_528236",
+    "customer_message": "pretty sure i'm never gonna be receiving my package from amazon (ordered with prime) that was shipped through @3375. the tracking info hasn't updated since the 28th. was supposed to arrive the 30th. definitely not impressed at all @AmazonHelp",
+    "raw_customer_text": "pretty sure i'm never gonna be receiving my package from amazon (ordered with prime) that was shipped through @3375. the tracking info hasn't updated since the 28th. was supposed to arrive the 30th. definitely not impressed at all @AmazonHelp",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_143",
+    "conversation_id": "conv_226117",
+    "customer_message": "awesome thanks, because I just renewed my membership 4 days ago. So now I'll get another year.. wooohooo",
+    "raw_customer_text": "@AmazonHelp awesome thanks, because I just renewed my membership 4 days ago. So now I'll get another year.. wooohooo",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_144",
+    "conversation_id": "conv_1406592",
+    "customer_message": "Ok— delivered but now i get this error when trying to watch a prime movie",
+    "raw_customer_text": "@AmazonHelp Ok— delivered but now i get this error when trying to watch a prime movie https://t.co/5Md98fvcQ8",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_145",
+    "conversation_id": "conv_1402854",
+    "customer_message": "I've just been watching the latest episode of Mr Robot on Prime Video & there's whole patches with no English translation subs!",
+    "raw_customer_text": "@AmazonHelp I've just been watching the latest episode of Mr Robot on Prime Video &amp; there's whole patches with no English translation subs!",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_146",
+    "conversation_id": "conv_1061362",
+    "customer_message": "I must be confused about what 2 day shipping means. #prime #amazon",
+    "raw_customer_text": "@AmazonHelp @115821 I must be confused about what 2 day shipping means. #prime #amazon https://t.co/zK9kscGgLO",
+    "gold_intent": "account_prime_billing",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine account_prime_billing query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_147",
+    "conversation_id": "conv_895094",
+    "customer_message": "I already have fire stick.will i be eligible",
+    "raw_customer_text": "@AmazonHelp I already have fire stick.will i be eligible",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_148",
+    "conversation_id": "conv_30038",
+    "customer_message": "Alexa's accent for Indian English is horrible. Just horrible. And skills are blocked for other languages.",
+    "raw_customer_text": "@115850 @AmazonHelp Alexa's accent for Indian English is horrible. Just horrible. And skills are blocked for other languages.",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_149",
+    "conversation_id": "conv_656136",
+    "customer_message": "what's happening here with Alexa?",
+    "raw_customer_text": "@AmazonHelp what's happening here with Alexa? https://t.co/xaoHmqqffp",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High ambiguity: minimal context requires human clarification."
+  },
+  {
+    "id": "eval_150",
+    "conversation_id": "conv_343938",
+    "customer_message": "Hey there is this weird thing going on, I can't proceed to recharge or checkout. Blank screen. Help ! Tried updating but still 👇",
+    "raw_customer_text": "@AmazonHelp Hey there is this weird thing going on, I can't proceed to recharge or checkout. Blank screen. Help ! Tried updating but still 👇 https://t.co/CnIGmwXYvj",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_151",
+    "conversation_id": "conv_1131221",
+    "customer_message": "a promoção de 1.99 por três meses de Kindle Unlimited é verdadeira? Confundi porque lá fala no preço normal de 59.90 e não 19.90",
+    "raw_customer_text": "@AmazonHelp a promoção de 1.99 por três meses de Kindle Unlimited é verdadeira? Confundi porque lá fala no preço normal de 59.90 e não 19.90",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_152",
+    "conversation_id": "conv_180249",
+    "customer_message": "sir already filled please check i filled this form 4 times you can also check with this screen grabbi have taken 3rd and 4th tim",
+    "raw_customer_text": "@AmazonHelp @115851 sir already filled please check i filled this form 4 times you can also check with this screen grabbi have taken 3rd and 4th tim https://t.co/erGEvHOiYi",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_153",
+    "conversation_id": "conv_793924",
+    "customer_message": "Yes it is enabled. When I go to select it, there is no English language. I use fire TV stick.",
+    "raw_customer_text": "@AmazonHelp Yes it is enabled. When I go to select it, there is no English language. I use fire TV stick.",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_154",
+    "conversation_id": "conv_1393972",
+    "customer_message": "#worstcustomerservice whole day wasted nobody came to collect the faulty device",
+    "raw_customer_text": "@115850 @AmazonHelp @115821 #worstcustomerservice whole day wasted nobody came to collect the faulty device",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_155",
+    "conversation_id": "conv_1309111",
+    "customer_message": "how I can change and customise the lock screen wallpaper!? On Amazon Fire HD Tablet 10.1 screen",
+    "raw_customer_text": "@AmazonHelp how I can change and customise the lock screen wallpaper!? On Amazon Fire HD Tablet 10.1 screen https://t.co/y5sTv28FrU",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_156",
+    "conversation_id": "conv_493363",
+    "customer_message": "I'm trying to use the Echo 3 pack for, but I am unable to use the promo code",
+    "raw_customer_text": "@AmazonHelp I'm trying to use the Echo 3 pack for, but I am unable to use the promo code https://t.co/SVPZcVCv4F",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_157",
+    "conversation_id": "conv_438023",
+    "customer_message": "I have. Multiple times. I have even power cycled the entire system and wifi router.",
+    "raw_customer_text": "@AmazonHelp I have. Multiple times. I have even power cycled the entire system and wifi router.",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_158",
+    "conversation_id": "conv_439228",
+    "customer_message": "Voila le screen (numéro de suivi par MP si vous voulez ?)",
+    "raw_customer_text": "@AmazonHelp Voila le screen (numéro de suivi par MP si vous voulez ?) https://t.co/TAH00K1p82",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_159",
+    "conversation_id": "conv_246342",
+    "customer_message": "I am supposed to download Alexa, right? Is it available on the android store?",
+    "raw_customer_text": "@AmazonHelp I am supposed to download Alexa, right? Is it available on the android store?",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_160",
+    "conversation_id": "conv_970549",
+    "customer_message": "Will try that. It's a new device so just finding my way around at the minute",
+    "raw_customer_text": "@AmazonHelp Will try that. It's a new device so just finding my way around at the minute",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_161",
+    "conversation_id": "conv_760465",
+    "customer_message": "I already did a lot of efforts since last 17 days,, first you send me a faulty Bluetooth earpeace like device than I did a huge effort to",
+    "raw_customer_text": "@AmazonHelp I already did a lot of efforts since last 17 days,, first you send me a faulty Bluetooth earpeace like device than I did a huge effort to",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_162",
+    "conversation_id": "conv_544357",
+    "customer_message": "Entire episode. In fact previous one as well. Subtitles appear at least 3-4 seconds prior. Ruins the fun. & I tried refreshing browser, relogging stuff & all. Happened the same in ‘Major Crimes’ a few times, earlier. Any further troubleshoot?",
+    "raw_customer_text": "@AmazonHelp Entire episode. In fact previous one as well. Subtitles appear at least 3-4 seconds prior. Ruins the fun. &amp; I tried refreshing browser, relogging stuff &amp; all. Happened the same in ‘Major Crimes’ a few times, earlier. Any further troubleshoot?",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_163",
+    "conversation_id": "conv_306606",
+    "customer_message": "please, why is it so tough to get your Echo to recognise @33237 !! Help...",
+    "raw_customer_text": "@AmazonHelp please, why is it so tough to get your Echo to recognise @33237 !! Help...",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_164",
+    "conversation_id": "conv_1221775",
+    "customer_message": "Our home screen won't load",
+    "raw_customer_text": "@AmazonHelp Our home screen won't load",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High ambiguity: minimal context requires human clarification."
+  },
+  {
+    "id": "eval_165",
+    "conversation_id": "conv_795104",
+    "customer_message": "Can you give me an ETA? Please consider to start streaming after a day or so of original US airing .",
+    "raw_customer_text": "@AmazonHelp Can you give me an ETA? Please consider to start streaming after a day or so of original US airing .",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_166",
+    "conversation_id": "conv_661417",
+    "customer_message": "my 4yo bought a bunch of shit on our #kindle that I did not authorize. How do I get that money bqck??",
+    "raw_customer_text": "@AmazonHelp my 4yo bought a bunch of shit on our #kindle that I did not authorize. How do I get that money bqck??",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_167",
+    "conversation_id": "conv_279645",
+    "customer_message": "I already contacted customer support many times, however the products still remains wit me. PFA screen shot .",
+    "raw_customer_text": "@AmazonHelp I already contacted customer support many times, however the products still remains wit me. PFA screen shot . https://t.co/kMfl2kkYuc",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_168",
+    "conversation_id": "conv_254661",
+    "customer_message": "Grrrrr @AmazonHelp Wenn die #alexa in der tv Werbung sagt mach das Wohnzimmer aus und meins dann aus geht finde uncool richtig uncool",
+    "raw_customer_text": "Grrrrr @AmazonHelp Wenn die #alexa in der tv Werbung sagt mach das Wohnzimmer aus und meins dann aus geht finde uncool richtig uncool",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_169",
+    "conversation_id": "conv_78820",
+    "customer_message": "Is it possible to give someone a gift from the Kindle store in the UK, and have it delivered to their device? Seems it's possible for US customers but not available here? You're losing money if this isn't possible!",
+    "raw_customer_text": "@AmazonHelp Is it possible to give someone a gift from the Kindle store in the UK, and have it delivered to their device? Seems it's possible for US customers but not available here? You're losing money if this isn't possible!",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_170",
+    "conversation_id": "conv_1110263",
+    "customer_message": "is AWS currently experiencing issues. All apps on Fire Stick will highlight but not open.",
+    "raw_customer_text": "@AmazonHelp is AWS currently experiencing issues. All apps on Fire Stick will highlight but not open.",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_171",
+    "conversation_id": "conv_641704",
+    "customer_message": "Using a mobile device, safari.",
+    "raw_customer_text": "@AmazonHelp Using a mobile device, safari.",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_172",
+    "conversation_id": "conv_454538",
+    "customer_message": "Does anyone know how to change Amazon Echo's language to English Canada?It only gives me English US and English UK and it deleted all my skills until I change it to Canada! ARGH #iot #smarthome #tech #amazonecho @AmazonHelp",
+    "raw_customer_text": "Does anyone know how to change Amazon Echo's language to English Canada?It only gives me English US and English UK and it deleted all my skills until I change it to Canada! ARGH #iot #smarthome #tech #amazonecho @AmazonHelp https://t.co/qlUXG84pMU",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_173",
+    "conversation_id": "conv_11574",
+    "customer_message": "enviei meu ebook para o premio Kindle às 22h de hoje. Porém, a ferramenta kdp fala q demora 72h pra publicar. Vou concorrer mesmo assim, certo?",
+    "raw_customer_text": "@AmazonHelp enviei meu ebook para o premio Kindle às 22h de hoje. Porém, a ferramenta kdp fala q demora 72h pra publicar. Vou concorrer mesmo assim, certo?",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_174",
+    "conversation_id": "conv_828304",
+    "customer_message": "FYI - Alexa’s capital cities games is inaccurate! Juneau is the capital of Alaska, not Anchorage! #EarnedMy100%",
+    "raw_customer_text": "@AmazonHelp FYI - Alexa’s capital cities games is inaccurate! Juneau is the capital of Alaska, not Anchorage! #EarnedMy100%",
+    "gold_intent": "product_tech_support",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine product_tech_support query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_175",
+    "conversation_id": "conv_942686",
+    "customer_message": "your customer service is shit and your people are rude as fuck lmfao",
+    "raw_customer_text": "@AmazonHelp your customer service is shit and your people are rude as fuck lmfao",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_176",
+    "conversation_id": "conv_1043652",
+    "customer_message": "You are saying you will work on it. That means you have not started yet. And what about work since I made complaint on Sat",
+    "raw_customer_text": "@AmazonHelp @115821 @115850 You are saying you will work on it. That means you have not started yet. And what about work since I made complaint on Sat",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_177",
+    "conversation_id": "conv_1297467",
+    "customer_message": "Does amazon have any alternative resolutions team they work with. Or have an address that I can send a complaint letter to",
+    "raw_customer_text": "@AmazonHelp Does amazon have any alternative resolutions team they work with. Or have an address that I can send a complaint letter to",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_178",
+    "conversation_id": "conv_999169",
+    "customer_message": "I am disheartened by such rude behaviour by amazon to block my number. this was unexpected for me...anyway i will wait..... Thanks",
+    "raw_customer_text": "@AmazonHelp I am disheartened by such rude behaviour by amazon to block my number. this was unexpected for me...anyway i will wait..... Thanks",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_179",
+    "conversation_id": "conv_683080",
+    "customer_message": "yeah i know it's unusual from Amazon, Thats why i only use amazon in INDIA and UK. if you want go and check my orders how often i do use your service ! but this time i had horrible experience i hope i will never face this again !",
+    "raw_customer_text": "@AmazonHelp yeah i know it's unusual from Amazon, Thats why i only use amazon in INDIA and UK. if you want go and check my orders how often i do use your service ! but this time i had horrible experience i hope i will never face this again !",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_180",
+    "conversation_id": "conv_866038",
+    "customer_message": "See the way amazon speaks, so rude. Is this the way you deal with your customer? #AForçaDoQuererFinal #ShowtimeLetsCelebr8 #TwitterIn4words",
+    "raw_customer_text": "@AmazonHelp @115851 @127586 @120844 @131283 @1560 @131027 @119351 @26653 @4031 See the way amazon speaks, so rude. Is this the way you deal with your customer? #AForçaDoQuererFinal #ShowtimeLetsCelebr8 #TwitterIn4words",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_181",
+    "conversation_id": "conv_929632",
+    "customer_message": "&gt; option for the call ever, ever ending. I'm now very upset and angry. Since your staff won't tell me - how do I make a formal complaint?",
+    "raw_customer_text": "@AmazonHelp &gt; option for the call ever, ever ending. I'm now very upset and angry. Since your staff won't tell me - how do I make a formal complaint?",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_182",
+    "conversation_id": "conv_1043021",
+    "customer_message": "Could I get a message please? I’ve got a complaint to make",
+    "raw_customer_text": "@AmazonHelp Could I get a message please? I’ve got a complaint to make",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_183",
+    "conversation_id": "conv_397412",
+    "customer_message": "Kindly update on my complaint.",
+    "raw_customer_text": "@AmazonHelp Kindly update on my complaint.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High ambiguity: minimal context requires human clarification."
+  },
+  {
+    "id": "eval_184",
+    "conversation_id": "conv_746789",
+    "customer_message": "Dear @AmazonHelp why are you telling me now that my delivery due today won’t be delivered? Unacceptable.",
+    "raw_customer_text": "Dear @AmazonHelp why are you telling me now that my delivery due today won’t be delivered? Unacceptable.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_185",
+    "conversation_id": "conv_439303",
+    "customer_message": "It's been more than 48 hours since I filed the first complaint. No resolution yet. All I get is \"It's been escalated and the team is working",
+    "raw_customer_text": "@AmazonHelp It's been more than 48 hours since I filed the first complaint. No resolution yet. All I get is \"It's been escalated and the team is working",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_186",
+    "conversation_id": "conv_199258",
+    "customer_message": "The other week my parcel was left in my blue bin. Can I forward a complaint please as @10912 haven’t replied.",
+    "raw_customer_text": "@AmazonHelp The other week my parcel was left in my blue bin. Can I forward a complaint please as @10912 haven’t replied. https://t.co/KtmNFah88V",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_187",
+    "conversation_id": "conv_1170211",
+    "customer_message": "Yes, again. Pd 1 day ship told contract driver had a flat tire yesterday. Nvr ret'd my pkgs to delv ctr. Utterly unacceptable",
+    "raw_customer_text": "@AmazonHelp Yes, again. Pd 1 day ship told contract driver had a flat tire yesterday. Nvr ret'd my pkgs to delv ctr. Utterly unacceptable",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_188",
+    "conversation_id": "conv_1042218",
+    "customer_message": "I'm not giving feedbacks here do you understand.Why was I not given the proper information? Why was I told to go to the bank/file complaint?",
+    "raw_customer_text": "@AmazonHelp I'm not giving feedbacks here do you understand.Why was I not given the proper information? Why was I told to go to the bank/file complaint?",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_189",
+    "conversation_id": "conv_1352223",
+    "customer_message": "received literally the worst customer service ever today. wont be purchasing anything important through amazon again.",
+    "raw_customer_text": "@115821 @AmazonHelp received literally the worst customer service ever today. wont be purchasing anything important through amazon again.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_190",
+    "conversation_id": "conv_622495",
+    "customer_message": "Was expecting a resolution call as promised by Amazon.in yesterday for the complaint raised . But to no avail.. __email__ :( @115850 @AmazonHelp",
+    "raw_customer_text": "Was expecting a resolution call as promised by Amazon.in yesterday for the complaint raised . But to no avail.. __email__ :( @115850 @AmazonHelp",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_191",
+    "conversation_id": "conv_1387200",
+    "customer_message": "I'll expect contact by this evening at the latest, as per the 12 hour promise on the two forms I have completed. I'd still like to make a proper complaint though and would like to know how I do this without more delay and let down. Thanks.",
+    "raw_customer_text": "@AmazonHelp I'll expect contact by this evening at the latest, as per the 12 hour promise on the two forms I have completed. I'd still like to make a proper complaint though and would like to know how I do this without more delay and let down. Thanks.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_192",
+    "conversation_id": "conv_810795",
+    "customer_message": "Dint send an email this time. But have sent several mails,no response. Lodged a complaint in national consumer helpline but shamelessly(1/2)",
+    "raw_customer_text": "@AmazonHelp Dint send an email this time. But have sent several mails,no response. Lodged a complaint in national consumer helpline but shamelessly(1/2)",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_193",
+    "conversation_id": "conv_330178",
+    "customer_message": "Sorry but if u cant sort it here with all the details i gave u,i'm dissapointed.Item was delivered 2wrong house,rude guy.i order regularly.",
+    "raw_customer_text": "@AmazonHelp Sorry but if u cant sort it here with all the details i gave u,i'm dissapointed.Item was delivered 2wrong house,rude guy.i order regularly.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_194",
+    "conversation_id": "conv_1190238",
+    "customer_message": "I did that @AmazonHelp @115850 , that's one of the useless link, let apart resolution to the complaint, even complaint number is not provided, That's something ridiculous. Hopeless customer support.",
+    "raw_customer_text": "@AmazonHelp I did that @AmazonHelp @115850 , that's one of the useless link, let apart resolution to the complaint, even complaint number is not provided, That's something ridiculous. Hopeless customer support.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_195",
+    "conversation_id": "conv_224565",
+    "customer_message": "Again bad or say worst reply from AMAZON!! Why dont you check your faults...made complaint on 29th sept, still same disgusting response!!",
+    "raw_customer_text": "@AmazonHelp Again bad or say worst reply from AMAZON!! Why dont you check your faults...made complaint on 29th sept, still same disgusting response!!",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_196",
+    "conversation_id": "conv_503459",
+    "customer_message": "Can I make a complaint about carriers? Having orders out for delivery and just not show up is really crummy.",
+    "raw_customer_text": "@AmazonHelp Can I make a complaint about carriers? Having orders out for delivery and just not show up is really crummy.",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_197",
+    "conversation_id": "conv_812337",
+    "customer_message": "stayed in for a delivery last night. Now found out it will come in \"a day or two\". Unacceptable, can you please confirm when it is coming ?",
+    "raw_customer_text": "@AmazonHelp stayed in for a delivery last night. Now found out it will come in \"a day or two\". Unacceptable, can you please confirm when it is coming ?",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: High-risk trigger keyword detected (fraud, legal threat, severe complaint, or account lock)."
+  },
+  {
+    "id": "eval_198",
+    "conversation_id": "conv_616910",
+    "customer_message": "You are pre-authorising my account £1 on a weekly basis. I want to make an official complaint. I have phoned emailed and live chatted to no avail. If I don’t get a response I will report you to OFT & Ombudsman",
+    "raw_customer_text": "@AmazonHelp You are pre-authorising my account £1 on a weekly basis. I want to make an official complaint. I have phoned emailed and live chatted to no avail. If I don’t get a response I will report you to OFT &amp; Ombudsman",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "AUTO_HANDLE",
+    "evaluation_notes": "Routine feedback_complaint query. Suitable for automated response grounded in brand history."
+  },
+  {
+    "id": "eval_199",
+    "conversation_id": "conv_580578",
+    "customer_message": "#AmazonIndia how long do I have to wait its already 10days since i created a replacement requests but i guess you guy are not bothered. Horrible #AmazonIndia",
+    "raw_customer_text": "@AmazonHelp #AmazonIndia how long do I have to wait its already 10days since i created a replacement requests but i guess you guy are not bothered. Horrible #AmazonIndia",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  },
+  {
+    "id": "eval_200",
+    "conversation_id": "conv_1398479",
+    "customer_message": "thanks for not delivering my item overnight when I paid for it and telling me that I could wait 4 extra days!! Horrible service",
+    "raw_customer_text": "@AmazonHelp thanks for not delivering my item overnight when I paid for it and telling me that I could wait 4 extra days!! Horrible service",
+    "gold_intent": "feedback_complaint",
+    "gold_escalation": "ESCALATE",
+    "evaluation_notes": "Escalation required. Reason: Customer complaint requires personal human supervisor empathy/apology."
+  }
+]

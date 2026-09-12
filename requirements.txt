@@ -1,0 +1,17 @@
+﻿# Core ML & NLP
+scikit-learn>=1.4.0
+sentence-transformers>=2.5.0
+faiss-cpu>=1.7.4
+numpy>=1.26.0
+pandas>=2.2.0
+
+# LLM & Evaluation
+google-genai>=0.1.0
+openai>=1.12.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+scipy>=1.12.0
+
+# Web Demo
+streamlit>=1.31.0
