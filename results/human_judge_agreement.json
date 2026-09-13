@@ -1,0 +1,410 @@
+{
+  "sample_size": 50,
+  "spearman_correlation": 0.673,
+  "p_value": 8.577647977579561e-08,
+  "mean_absolute_error": 0.516,
+  "mean_human_score": 4.52,
+  "mean_judge_score": 4.39,
+  "records": [
+    {
+      "id": "eval_001",
+      "message": "Friday 27th October.",
+      "human_score": 3.5,
+      "judge_score": 4.4,
+      "diff": 0.9,
+      "judge_justification": "The response is professional and follows precedent for directing users to support, but it assumes an issue exists without clarifying the vague date provided. It provides a clear, safe call to action that aligns with the brand's standard operating procedure."
+    },
+    {
+      "id": "eval_002",
+      "message": "Was 28 Sept, then updated to today. BUT from the tracking info I doubt it will be here... Should I DM the tracking or order number?",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response aligns perfectly with the provided evidence regarding courier delivery windows and professional tone. It is highly effective, though it misses an explicit acknowledgment of the customer's specific question about whether they should provide their order details via DM."
+    },
+    {
+      "id": "eval_003",
+      "message": "No, just it might be today although looks like it went to Preston not Surrey so don\u2019t hold much hope for today \ud83d\ude14",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is perfectly aligned with the precedent of requesting tracking information to verify the status. It is professional and safe, though it could be slightly improved by adding a small empathetic sign-off to acknowledge the customer's disappointment."
+    },
+    {
+      "id": "eval_004",
+      "message": "when the below is your latest tracking update, not a lot of reason to be optimistic: December 3, 2017, 1:47 am Delivery status not updated The delivery status for this item has not been updated as of December 3, 2017, 1:47 am.",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is highly professional, adheres to the brand tone, and safely directs the user to an official support channel. While it is helpful, it lacks a brief explanation of why the tracking might be delayed, which would have added further value."
+    },
+    {
+      "id": "eval_005",
+      "message": "I believe transportation was amazone and seller wae greenmobile. Check it plz",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly synthesizes the provided precedents by directing the user to check their order history while also offering an escalation path. It maintains a professional tone and adheres strictly to safety and privacy guidelines."
+    },
+    {
+      "id": "eval_006",
+      "message": "How do I register a complaint against a delivery driver who says they attempted delivery but my home cctv cameras show they never came to the house - and we were in...?",
+      "human_score": 3.0,
+      "judge_score": 3.0,
+      "diff": 0.0,
+      "judge_justification": "The response invents a non-existent 'senior specialist routing' process instead of providing the standard support contact links found in the evidence. It fails to provide the customer with an actionable way to initiate their complaint."
+    },
+    {
+      "id": "eval_007",
+      "message": "Delivery By DPD Tracking ID 2083410232 Friday, 1 December 2:09 PM Held by carrier - customer to arrange delivery Dartford, GB 4:24 AM Parcel arrived at a carrier facility Dartford, GB Thursday, 30 November 9:50 PM Parcel arrived at a carrier facility Hub 3 - Bham, GB",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is accurate and adheres to the brand tone, effectively guiding the customer to the appropriate support channel. It is highly helpful, though providing a direct link rather than general instructions slightly exceeds the provided precedents."
+    },
+    {
+      "id": "eval_008",
+      "message": "YEAH BRO BUT I NEED YOU TO SOLVE THIS PLEASE JUST DELIVER IT THANKS",
+      "human_score": 4.5,
+      "judge_score": 3.8,
+      "diff": 0.7,
+      "judge_justification": "The response is professional and safe but lacks the specific call-to-action found in the precedents, such as requesting DMs or providing a link. It promises an internal escalation without clear instruction on how the customer can provide the necessary order details."
+    },
+    {
+      "id": "eval_009",
+      "message": "Thanks for ur response. My problem is not solvable but I'm happy by your approach. And pls don't use shit 3rd party courier.",
+      "human_score": 4.5,
+      "judge_score": 3.6,
+      "diff": 0.9,
+      "judge_justification": "The response fails to acknowledge the customer's specific feedback about courier services, inventing an escalation process not supported by the precedents. While professional and safe, it ignores the customer's stated acceptance of the situation by creating unnecessary, non-existent follow-up actions."
+    },
+    {
+      "id": "eval_010",
+      "message": "no because that option wasnt available for some reason but the first time I ordered I asked customer service to tell the delivery man to bring it to a store near my house that often takes packages but it never happened",
+      "human_score": 3.5,
+      "judge_score": 4.8,
+      "diff": 1.3,
+      "judge_justification": "The response accurately aligns with established support precedent by apologizing for the delivery issue and directing the customer to a secure contact link. It maintains a professional Amazon Twitter persona while ensuring safe handling of customer details."
+    },
+    {
+      "id": "eval_011",
+      "message": "Last delivery expected never arrived as \u201cundeliverable\u201d on 5 October Not for first time. Simply not good enough service",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response adheres strictly to the provided precedent for handling account-specific issues on Twitter. It is professional and secure, though including a direct link to the form would have improved its helpfulness."
+    },
+    {
+      "id": "eval_012",
+      "message": "Yes. Wednesday Nov 29.",
+      "human_score": 3.5,
+      "judge_score": 4.4,
+      "diff": 0.9,
+      "judge_justification": "The response perfectly mirrors the professional, concise tone of Amazon's support precedents. While it is polite and safe, it lacks a specific call to action or link to help the customer resolve the underlying issue."
+    },
+    {
+      "id": "eval_013",
+      "message": "Too late i drive",
+      "human_score": 3.0,
+      "judge_score": 2.6,
+      "diff": 0.4,
+      "judge_justification": "The response is not grounded in the provided precedents, which emphasize directing customers to specific support links or tools rather than making vague promises of senior specialist intervention. It fails to provide actionable guidance, relying instead on corporate jargon that does not address the customer's likely frustration regarding a delivery status."
+    },
+    {
+      "id": "eval_014",
+      "message": "This conversation is phenomenal. Honestly. There was no shipping cost. I have Prime.",
+      "human_score": 5.0,
+      "judge_score": 3.4,
+      "diff": 1.6,
+      "judge_justification": "The response is factually grounded and professional but fails to recognize that the customer is actually expressing satisfaction with their Prime shipping. It erroneously treats positive feedback as a delivery complaint, making it irrelevant and unhelpful."
+    },
+    {
+      "id": "eval_015",
+      "message": "Yes you did. Your customer care told me that max 30 min i vl gt a call frm delivery boy. That also didn't happen. Poor service.",
+      "human_score": 3.5,
+      "judge_score": 4.8,
+      "diff": 1.3,
+      "judge_justification": "The response effectively acknowledges the customer's frustration and aligns with established feedback-handling precedents. While helpful and professional, it could be slightly improved by providing a clear next step or secondary contact channel to resolve the ongoing delivery issue."
+    },
+    {
+      "id": "eval_016",
+      "message": "Still says it\u2019s out for delivery and has been for the last 10 hours",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response accurately utilizes provided evidence to manage customer expectations regarding delivery windows. While helpful and on-brand, it slightly misses an opportunity to offer further assistance should the package fail to arrive."
+    },
+    {
+      "id": "eval_017",
+      "message": "No not yet - very poor service again - 100% record of failing to deliver on time for me!",
+      "human_score": 3.5,
+      "judge_score": 4.8,
+      "diff": 1.3,
+      "judge_justification": "The response perfectly mirrors the professional, empathetic tone and diagnostic approach found in the provided precedents. While highly effective at gathering necessary information, it remains a 4 in helpfulness as it asks for information to solve the problem rather than resolving the delivery failure immediately."
+    },
+    {
+      "id": "eval_018",
+      "message": "It hasn't arrived it's passed 8",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the provided precedents by acknowledging the delay and requesting carrier information. It is helpful and professional, though it could be slightly improved by providing the link for checking the carrier as shown in Precedent #1."
+    },
+    {
+      "id": "eval_019",
+      "message": "No because it\u2019s still not been dispatched yet says it\u2019ll be delivered by 8pm today",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response accurately synthesizes the provided precedents by acknowledging current delivery expectations while offering clear next steps. It maintains the appropriate brand tone and effectively balances reassurance with a realistic contingency plan."
+    },
+    {
+      "id": "eval_020",
+      "message": "The tracking shows the courier could not find my address. Which is absolute rubbish. This has never happened before.",
+      "human_score": 4.5,
+      "judge_score": 3.6,
+      "diff": 0.9,
+      "judge_justification": "The response is polite and professional, but it deviates from the retrieved evidence precedents by failing to provide a direct support link or invitation for the customer to reach out privately. Additionally, mentioning a 'senior customer support specialist' is not grounded in the provided precedents."
+    },
+    {
+      "id": "eval_021",
+      "message": "Order #113-4170745-7075432 has yet to arrive, and is now delayed 1-4 days. Twice in the last 6wks Prime shipping has let me down",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response closely follows the standard precedent for handling delivery complaints by moving the conversation to a secure DM. It maintains a professional brand voice and ensures customer privacy is protected."
+    },
+    {
+      "id": "eval_022",
+      "message": "Worst support team.. still no update on this order. I have ordered this product on 28sept.",
+      "human_score": 4.5,
+      "judge_score": 4.8,
+      "diff": 0.3,
+      "judge_justification": "The response maintains high standards of brand tone, safety, and relevance while accurately escalating the customer's delayed order issue. It aligns well with the precedent style of routing to specialists, though providing a direct link for private details would make it slightly more actionable."
+    },
+    {
+      "id": "eval_023",
+      "message": "Not resolved..had to postpone the delivery to Monday",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is professional and follows Amazon's standard protocol of requesting order details to investigate the delay. It is highly effective, though it could be slightly more helpful by acknowledging the frustration of the specific Monday postponement mentioned by the customer."
+    },
+    {
+      "id": "eval_024",
+      "message": "My guaranteed delivery date was Monday.",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the successful troubleshooting tone found in the precedents while maintaining Amazon's professional brand voice. It is highly effective, though it misses a direct link to the tracking portal which would have improved its helpfulness score."
+    },
+    {
+      "id": "eval_025",
+      "message": "what happened to 7 day prime delivery? A lot of prime products now only offer Monday / Tuesday delivery? #prime",
+      "human_score": 5.0,
+      "judge_score": 4.6,
+      "diff": 0.4,
+      "judge_justification": "The response accurately cites the standard Prime transit time policy based on the provided precedents. While helpful and on-brand, it lacks a direct call to action or an offer to investigate the user's specific account/order."
+    },
+    {
+      "id": "eval_026",
+      "message": "Please do fast all u can do. I want my refund as fast as possible.",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the resolution style of the provided precedents while maintaining a professional and secure tone. It is highly helpful, though it relies on the assumption that a link was previously shared."
+    },
+    {
+      "id": "eval_027",
+      "message": "what details are you talking about? my bank details? are you being FBI now?",
+      "human_score": 5.0,
+      "judge_score": 5.0,
+      "diff": 0.0,
+      "judge_justification": "The response effectively addresses the customer's fear by clarifying data security while providing a secure channel for further assistance. It maintains the professional, concise tone expected of Amazon support staff."
+    },
+    {
+      "id": "eval_028",
+      "message": "I tried two cards. Declining payment. Confirm at your end also. I will to my bank",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly aligns with the provided precedents by advising the customer to consult their bank. It is professional and secure, though it could be slightly more helpful by explicitly mentioning privacy protections regarding order details."
+    },
+    {
+      "id": "eval_029",
+      "message": "how much time I have to wait, it has been more than 25 days now. if you do not return my money i will file a consumer case on you",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is perfectly grounded in the provided precedents and maintains a professional tone appropriate for Amazon support. It is highly helpful and safe, though it could be improved by acknowledging the specific 25-day timeframe mentioned by the customer."
+    },
+    {
+      "id": "eval_030",
+      "message": "It's been over 36 hours like you recommend online. The chat rep was supposed to refund through gift card so I could reorder the same products. The phone rep today said that the chat rep made note of refund to credit.. then said she would switch to gift card.. but nothing...",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly aligns with the provided evidence regarding refund timelines and maintains the appropriate brand tone. It is highly helpful, though it stops slightly short of providing a direct link for further assistance if the issue remains unresolved after 48 hours."
+    },
+    {
+      "id": "eval_031",
+      "message": "Your team refuse to Release the product. The Amazon theft my money.",
+      "human_score": 3.0,
+      "judge_score": 4.4,
+      "diff": 1.4,
+      "judge_justification": "The response maintains a professional Amazon Twitter tone and safely escalates a frustrated customer's serious allegation without making unauthorized promises. However, it lacks specific actionable guidance or troubleshooting steps due to the vague nature of the customer's severe claim."
+    },
+    {
+      "id": "eval_032",
+      "message": "I was informed d refund will be done by Oct7. It's HASN'T. have quite a few purchases 2 make & I need the money. (1/2)",
+      "human_score": 5.0,
+      "judge_score": 4.4,
+      "diff": 0.6,
+      "judge_justification": "The response is consistent with the provided precedents and brand tone, but it lacks actionable next steps such as asking for order details via DM. While it safely avoids empty promises, it provides minimal assistance to the frustrated customer."
+    },
+    {
+      "id": "eval_033",
+      "message": "It says AMZL US",
+      "human_score": 3.5,
+      "judge_score": 4.8,
+      "diff": 1.3,
+      "judge_justification": "The response perfectly mirrors the tone and approach of the provided precedents by directing the customer to a secure contact channel. It is highly professional and safe, though it slightly lacks the personalized context provided in precedent #3."
+    },
+    {
+      "id": "eval_034",
+      "message": "Why have you shipped me the wrong product twice and not included a return label this is ridiculous.",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the resolution strategy used in the provided precedents by directing the customer to a secure contact link. It is professional and safe, though it could be slightly improved by acknowledging the specific annoyance of the error occurring twice."
+    },
+    {
+      "id": "eval_035",
+      "message": "Yeah both today they have been refunded but now I have no prime cos I can\u2019t afford to pay again until the money comes back it would be \u00a3240",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is accurate to Amazon's refund processes and maintains a professional, empathetic tone. It could be slightly improved by offering a direct link or phone number for the customer to escalate the issue if the bank timeline exceeds expectations."
+    },
+    {
+      "id": "eval_036",
+      "message": "Ive recieved an email this morning with a return number saying I'm getting a refund, I've requested no return, and I don't want a refund, I want all the items I ordered delivered to me @AmazonHelp @115830 I've even received emails asking to give feedback on the products and",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is highly professional and redirects the user to the correct support channel for complex order issues. It is grounded in standard support procedures while maintaining a helpful, brand-appropriate tone."
+    },
+    {
+      "id": "eval_037",
+      "message": "What I want to do is exchange it for the same one as it\u2019s a birthday present, I can only see how to refund, though I have been lost on the internet before.",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the tone and directive nature of the provided precedents while maintaining Amazon's secure support protocols. It is highly relevant, though it directs the user away from Twitter rather than providing a direct link to the exchange policy page."
+    },
+    {
+      "id": "eval_038",
+      "message": "Oi, eu gosto muito de romance, de fantasia, romance er\u00f3tico, mang\u00e1, HQ \ud83d\ude02\ud83d\ude02\ud83d\ude02 Sou um pouco ecletica",
+      "human_score": 3.0,
+      "judge_score": 1.4,
+      "diff": 1.6,
+      "judge_justification": "The response is a complete hallucination, treating a casual conversational tweet as a complex technical support issue. It ignores the customer's interest in books and provides a robotic, irrelevant escalation that does not align with Amazon's conversational brand tone."
+    },
+    {
+      "id": "eval_039",
+      "message": "SIIIIM! Aguardando ansiosamente os livros chegarem em casa!",
+      "human_score": 3.0,
+      "judge_score": 1.8,
+      "diff": 1.2,
+      "judge_justification": "The response is completely inappropriate for the context, as it treats a positive customer sentiment as a complex technical issue. It fails to match the conversational, friendly tone established in the precedents and ignores the customer's excitement entirely."
+    },
+    {
+      "id": "eval_040",
+      "message": "Ordered Redmi 4 from Amazon.in. Now, i want to return/ exchange the mobile because i did not like the camera. Plz help...",
+      "human_score": 4.5,
+      "judge_score": 3.2,
+      "diff": 1.3,
+      "judge_justification": "The response fails to align with the provided precedents, which indicate that remorse returns for mobile phones are typically not accepted. By promising a senior specialist review instead of clarifying the policy, the AI sets false expectations and ignores established guidelines."
+    },
+    {
+      "id": "eval_041",
+      "message": "Let's guess how many times I have to tell @AmazonHelp that I have contacted my bank before they realize it is their sites problem?",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is grounded in the precedent of escalating persistent issues to a specialist via DM. While it is highly professional and safe, it is slightly generic as it doesn't acknowledge the specific 'bank' context mentioned in the tweet."
+    },
+    {
+      "id": "eval_042",
+      "message": "So how do I get my money back please",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is perfectly aligned with Precedent #1 and maintains a professional Amazon support tone. It is actionable and safe, though it could be slightly improved by briefly noting that specific refund timelines depend on the payment method."
+    },
+    {
+      "id": "eval_043",
+      "message": "i have not heard anything on this. Please refund my money in my account .",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the successful pattern established in Precedent #3 by directing the customer to a secure channel for account-specific support. It maintains a professional tone and adheres to safety protocols by avoiding public handling of sensitive financial information."
+    },
+    {
+      "id": "eval_044",
+      "message": "why is a cloudtail sold bag not eligible for return? Please resolve! thanks",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response adheres perfectly to the tone and redirection tactics found in the evidence precedents. It is professional and safe, though it could be slightly more helpful by clarifying if Cloudtail items typically have different return policies."
+    },
+    {
+      "id": "eval_045",
+      "message": "I have already send you all guys many times call, email, Fb post talk But i'm not getting proper response from your side. IN many link i have posted provide by @115850 So, plz don't make me fool return my money.",
+      "human_score": 4.5,
+      "judge_score": 3.6,
+      "diff": 0.9,
+      "judge_justification": "The response deviates from the provided evidence by inventing a 'senior specialist' escalation process instead of directing the customer to existing correspondence. While the tone is professional, it fails to utilize the established protocol of asking the customer to check for previous team communications."
+    },
+    {
+      "id": "eval_046",
+      "message": "I have already provided details 2 days back but so far, I haven't hear positive @115851 pl refund cashback or I will file FIR against you",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is highly professional and follows the precedent of directing customers toward secure DM channels. It is slightly less helpful by not explicitly offering a backup contact method if the DM process has already stalled."
+    },
+    {
+      "id": "eval_047",
+      "message": "now what will u do. Ur are too slow in customer refund has been initiated @AmazonHelp @115821",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response perfectly mirrors the professional and empathetic tone seen in the precedents. It is slightly docked in helpfulness only because the placeholder link for sharing details was omitted, though the directive to share information remains clear."
+    },
+    {
+      "id": "eval_048",
+      "message": "It was regarding a cashback, product bought in July, still haven't recd cashback",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response aligns perfectly with the precedent of directing customers to a secure channel for private information. It loses one point in helpfulness only because the link placeholder is generic, though this is expected given the provided context."
+    },
+    {
+      "id": "eval_049",
+      "message": "I contacted your customer service center and even selected return option. But service boy refused to take back product this is fruad .I want to share such fruad info with people to aware of your such fruad work",
+      "human_score": 5.0,
+      "judge_score": 4.8,
+      "diff": 0.2,
+      "judge_justification": "The response is professional, maintains the expected brand tone, and provides a direct, actionable solution via a secure form link. It is slightly limited by the lack of an empathetic acknowledgment of the specific 'fraud' concern, but remains highly effective for a social media support context."
+    },
+    {
+      "id": "eval_050",
+      "message": "Then.arrange me replacement with other packaging if same product with your updated MRP or refund me money which you have taken more from MRP",
+      "human_score": 3.0,
+      "judge_score": 4.0,
+      "diff": 1.0,
+      "judge_justification": "The response is professional and aligns with Amazon's tone, but it introduces an escalation promise not supported by the provided precedents. It fails to direct the customer to a specific support channel as outlined in the retrieved evidence."
+    }
+  ]
+}

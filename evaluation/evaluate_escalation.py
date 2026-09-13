@@ -1,4 +1,4 @@
-﻿import json
+import json
 from typing import Dict, Any
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from src.escalation.policy import EscalationPolicy
@@ -36,21 +36,22 @@ def evaluate_escalation_system(
         pred_intent = clf_res["intent"]
         conf = clf_res["confidence"]
         
-        # 2. Retrieve top historical evidence
-        retrieved = retriever.retrieve_intent_aware(msg, intent=pred_intent, top_k=3)
-        
-        # 3. Escalation Decision
-        esc_res = policy.evaluate(
-            customer_message=msg,
-            predicted_intent=pred_intent,
-            confidence=conf,
-            retrieved_cases=retrieved
-        )
-        pred_decision = esc_res["decision"]
+        # 2. Stage 1: Pre-retrieval check (confidence & risk triggers)
+        pre_esc = policy.evaluate_pre_retrieval(msg, pred_intent, conf)
+        if pre_esc["decision"] == "ESCALATE":
+            pred_decision = "ESCALATE"
+            esc_reason = pre_esc["reason"]
+            retrieved = []
+        else:
+            # 3. Stage 2: Intent-aware retrieval from FAISS
+            retrieved = retriever.retrieve_intent_aware(msg, intent=pred_intent, top_k=3)
+            post_esc = policy.evaluate_retrieval_quality(msg, pred_intent, conf, retrieved)
+            pred_decision = post_esc["decision"]
+            esc_reason = post_esc["reason"]
         
         y_true.append(gold_decision)
         y_pred.append(pred_decision)
-        reasons.append(esc_res["reason"])
+        reasons.append(esc_reason)
         
         # Track errors
         if gold_decision == "ESCALATE" and pred_decision == "AUTO_HANDLE":
@@ -65,7 +66,7 @@ def evaluate_escalation_system(
             false_escalations.append({
                 "id": item["id"],
                 "message": msg,
-                "reason": esc_res["reason"]
+                "reason": esc_reason
             })
             
     # Binary metrics (treating ESCALATE as positive class 1)

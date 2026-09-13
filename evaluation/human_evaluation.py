@@ -1,4 +1,5 @@
-﻿import json
+import json
+import time
 import numpy as np
 from scipy.stats import spearmanr
 from typing import Dict, Any, List
@@ -67,6 +68,7 @@ def run_human_vs_judge_evaluation(
             "judge_justification": judge_res.get("justification", "")
         })
         
+        time.sleep(2.0)
         if idx % 10 == 0:
             print(f"  Processed {idx}/{sample_size} cases...")
 
@@ -83,12 +85,15 @@ def run_human_vs_judge_evaluation(
     print(f"Mean Human Rating           : {np.mean(human_scores):.2f} / 5.0")
     print(f"Mean Judge Rating           : {np.mean(judge_scores):.2f} / 5.0")
 
+    spearman_corr_val = 0.0 if np.isnan(spearman_corr) else float(round(spearman_corr, 4))
+    p_val = 1.0 if np.isnan(p_value) else float(p_value)
+
     # Save artifact
-    output_path = "evaluation/human_judge_agreement.json"
+    output_path = "results/human_judge_agreement.json"
     results = {
         "sample_size": sample_size,
-        "spearman_correlation": float(round(spearman_corr, 4)),
-        "p_value": float(p_value),
+        "spearman_correlation": spearman_corr_val,
+        "p_value": p_val,
         "mean_absolute_error": float(round(mae, 4)),
         "mean_human_score": float(round(np.mean(human_scores), 2)),
         "mean_judge_score": float(round(np.mean(judge_scores), 2)),

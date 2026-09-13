@@ -1,0 +1,452 @@
+[
+  {
+    "num": 1,
+    "prompt": "Where is my package? It was supposed to arrive today by 8 PM but the courier hasn't showed up. Tracking 94001000.",
+    "intent": "delivery_issue",
+    "conf": 0.961899995803833,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (96.2%) backed by strong historical precedents (top match: 0.78).",
+    "draft": "I am sorry to hear your package has not arrived as expected. Could you please check your order details to see if any specific carrier information or updated tracking is available? ^AH"
+  },
+  {
+    "num": 2,
+    "prompt": "My delivery driver marked the package as handed directly to resident, but nobody was home and my porch is completely empty!",
+    "intent": "feedback_complaint",
+    "conf": 0.5618000030517578,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence feedback_complaint query (56.2%) backed by strong historical precedents (top match: 0.69).",
+    "draft": "I am very sorry to hear about this frustrating delivery experience. Could you please let us know if this parcel was handled by our Amazon delivery team or a third-party courier so we can look into this for you? ^AH"
+  },
+  {
+    "num": 3,
+    "prompt": "Can you please tell me which courier is delivering order #402-918231? The tracking status hasn't updated in 48 hours.",
+    "intent": "delivery_issue",
+    "conf": 0.9653000235557556,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (96.5%) backed by strong historical precedents (top match: 0.77).",
+    "draft": "Please refrain from sharing your order details publicly, as this information is personal and visible to others. We kindly ask that you send us a direct message so we can look into your delivery status for you. ^AH"
+  },
+  {
+    "num": 4,
+    "prompt": "The tracking says delivered in mailbox, but the parcel is way too big to fit inside my mailbox! Did they drop it somewhere else?",
+    "intent": "delivery_issue",
+    "conf": 0.8263999819755554,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (82.6%) backed by strong historical precedents (top match: 0.69).",
+    "draft": "I'm sorry to hear that you haven't received your parcel despite the delivery status. Please reach out to us via this link so we can investigate this for you: amzn.to/38mGqYJ ^AH"
+  },
+  {
+    "num": 5,
+    "prompt": "Why does my delivery date keep getting pushed back every single day? It started as Tuesday now it says Friday.",
+    "intent": "delivery_issue",
+    "conf": 0.8763999938964844,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (87.6%) backed by strong historical precedents (top match: 0.76).",
+    "draft": "I am very sorry for the frustration caused by these repeated delivery delays. Please reach out to us directly via chat or phone here: [Link] so we can look into this for you. ^AH"
+  },
+  {
+    "num": 6,
+    "prompt": "My parcel went to Leeds instead of Manchester according to carrier tracking. Can you reroute it to the right depot?",
+    "intent": "delivery_issue",
+    "conf": 0.694100022315979,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (69.4%) backed by strong historical precedents (top match: 0.61).",
+    "draft": "I am very sorry to hear that your parcel has been routed to the wrong location. Have you contacted us directly via our website to report this delivery issue? ^AH"
+  },
+  {
+    "num": 7,
+    "prompt": "I ordered same-day Prime delivery this morning and it's already 10 PM. Are drivers still out delivering?",
+    "intent": "delivery_issue",
+    "conf": 0.8880000114440918,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (88.8%) backed by strong historical precedents (top match: 0.74).",
+    "draft": "Parcels can typically be delivered by 10pm. Please keep us posted on the delivery of your order. ^AH"
+  },
+  {
+    "num": 8,
+    "prompt": "I returned the shoes at the UPS access point 4 days ago. When will the refund reflect on my Visa card?",
+    "intent": "return_refund_status",
+    "conf": 0.9085000157356262,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (90.9%) backed by strong historical precedents (top match: 0.67).",
+    "draft": "I'm sorry for the wait and would like to look into the status of your refund. Please reach out to us via this link so we can investigate this for you: http://amzn.to/2oN77mC ^AH"
+  },
+  {
+    "num": 9,
+    "prompt": "How do I generate a prepaid return shipping label for an unwanted gift? I don't have a printer at home.",
+    "intent": "return_refund_status",
+    "conf": 0.8525999784469604,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (85.3%) backed by strong historical precedents (top match: 0.74).",
+    "draft": "I'm sorry for the inconvenience caused by not having a printer. Please reach out to us via phone or chat so we can explore alternative return options for you: ^AH"
+  },
+  {
+    "num": 10,
+    "prompt": "Your warehouse received my return last week but my account still says refund pending. Please expedite this.",
+    "intent": "return_refund_status",
+    "conf": 0.9355999827384949,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (93.6%) backed by strong historical precedents (top match: 0.66).",
+    "draft": "I am sorry to hear that you are still waiting for your refund to be processed. Please reach out to us here so we can look into this and assist you further: [Link] ^AH"
+  },
+  {
+    "num": 11,
+    "prompt": "Can I drop off my Amazon return at a local Kohl's store without boxing or labeling it?",
+    "intent": "return_refund_status",
+    "conf": 0.5024999976158142,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (50.2%) backed by strong historical precedents (top match: 0.60).",
+    "draft": "Yes, you can typically drop off eligible returns at a Kohl's store without a box or label. Please check your specific return options by visiting your orders page here: [Link] ^AH"
+  },
+  {
+    "num": 12,
+    "prompt": "I only got a partial refund for the 3 shirts I sent back in the same box. What happened to the remaining $25?",
+    "intent": "return_refund_status",
+    "conf": 0.9398999810218811,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (94.0%) backed by strong historical precedents (top match: 0.61).",
+    "draft": "I'm very sorry to hear about the issue with your refund for the shirts. We would like to take a closer look at this for you, so please share your order details with us here: ^AH"
+  },
+  {
+    "num": 13,
+    "prompt": "I chose refund to Amazon gift card balance instead of original payment method by mistake. Can you switch it back to my bank?",
+    "intent": "return_refund_status",
+    "conf": 0.8865000009536743,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (88.7%) backed by strong historical precedents (top match: 0.73).",
+    "draft": "I am sorry for the confusion regarding your refund method. Please send us a direct message so we can look into your account details and assist you further. ^AH"
+  },
+  {
+    "num": 14,
+    "prompt": "The seller approved my return request but hasn't sent a return address or RMA number. What are the next steps?",
+    "intent": "return_refund_status",
+    "conf": 0.8479999899864197,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (84.8%) backed by strong historical precedents (top match: 0.66).",
+    "draft": "I am sorry to hear about the delay with your return information. Please contact us via this link so we can review the status of your request and assist you further: https://amzn.to/3vj5o70 ^AH"
+  },
+  {
+    "num": 15,
+    "prompt": "Opened the parcel and the ceramic teapot was smashed into pieces! Shards were everywhere in the bubble wrap.",
+    "intent": "damaged_defective_item",
+    "conf": 0.9332000017166138,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence damaged_defective_item query (93.3%) backed by strong historical precedents (top match: 0.50).",
+    "draft": "We are so sorry to hear your teapot arrived damaged! Please reach out to us via phone or chat here: [Link] so we can review your options and further assist you. ^AH"
+  },
+  {
+    "num": 16,
+    "prompt": "The electronics package arrived soaking wet from the rain because the driver left it uncovered on the lawn. The device won't turn on.",
+    "intent": "damaged_defective_item",
+    "conf": 0.5913000106811523,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence damaged_defective_item query (59.1%) backed by strong historical precedents (top match: 0.53).",
+    "draft": "I am so sorry to hear your device arrived damaged due to the weather. We would love to help, so please reach out to us via phone or chat here: [link] ^AH"
+  },
+  {
+    "num": 17,
+    "prompt": "I bought a brand-new blender but the box was clearly resealed with clear tape and has dried food stains inside. You sent me a used unit!",
+    "intent": "damaged_defective_item",
+    "conf": 0.8313000202178955,
+    "decision": "ESCALATE",
+    "reason": "Weak historical evidence match (similarity 0.47 < 0.50). No close precedent.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 18,
+    "prompt": "The zipper on this jacket broke the very first time I zipped it up. Can I get a replacement sent out?",
+    "intent": "damaged_defective_item",
+    "conf": 0.75,
+    "decision": "ESCALATE",
+    "reason": "Weak historical evidence match (similarity 0.50 < 0.50). No close precedent.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 19,
+    "prompt": "My shampoo bottles leaked all over the books that were packed together in the same box. Everything is ruined.",
+    "intent": "damaged_defective_item",
+    "conf": 0.9613000154495239,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence damaged_defective_item query (96.1%) backed by strong historical precedents (top match: 0.55).",
+    "draft": "I'm sorry your order arrived in this condition. Please contact us here so we can look into this: [link] ^AH"
+  },
+  {
+    "num": 20,
+    "prompt": "The screen on the monitor has vertical green lines right out of the box. Do I return it or ask for a replacement?",
+    "intent": "damaged_defective_item",
+    "conf": 0.6615999937057495,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence damaged_defective_item query (66.2%) backed by strong historical precedents (top match: 0.51).",
+    "draft": "I'm sorry for the trouble! Let's go over your available options here: [link] & we'll look into this further with you. ^AH"
+  },
+  {
+    "num": 21,
+    "prompt": "I placed an order 5 minutes ago but realized I selected the wrong delivery address! How can I update it before dispatch?",
+    "intent": "cancellation_change_order",
+    "conf": 0.762499988079071,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence cancellation_change_order query (76.2%) backed by strong historical precedents (top match: 0.72).",
+    "draft": "You can make changes to your order information as long as the order hasn't entered the shipping process. If it has already shipped, please let us know so we can help! ^AH"
+  },
+  {
+    "num": 22,
+    "prompt": "Can I cancel item #2 from my order without cancelling the entire shipment? It's still in 'Preparing for Dispatch' status.",
+    "intent": "cancellation_change_order",
+    "conf": 0.9772999882698059,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence cancellation_change_order query (97.7%) backed by strong historical precedents (top match: 0.70).",
+    "draft": "I am sorry for the trouble, but since your order is already in the \"Preparing for Dispatch\" stage, please visit Your Orders to see if the cancelation option is available for that specific item. If it is no longer possible to cancel, you may refuse the shipment at the time of delivery to receive a refund for that item. ^AH"
+  },
+  {
+    "num": 23,
+    "prompt": "I need to change my delivery instructions to 'leave in back porch behind the gate' for tomorrow's drop-off.",
+    "intent": "cancellation_change_order",
+    "conf": 0.27649998664855957,
+    "decision": "ESCALATE",
+    "reason": "Low classification confidence (0.28 < 0.50). Message is ambiguous or spans multiple intents.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 24,
+    "prompt": "Please cancel order 112-9847192 immediately, my kid ordered it on the iPad without asking!",
+    "intent": "cancellation_change_order",
+    "conf": 0.6151999831199646,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence cancellation_change_order query (61.5%) backed by strong historical precedents (top match: 0.72).",
+    "draft": "I understand your concern regarding this accidental order. Please get in touch here: http://amzn.to/1T7n4SD if you need assistance with this cancellation. ^AH"
+  },
+  {
+    "num": 25,
+    "prompt": "Can I add one more item to my existing order so they ship together in one box?",
+    "intent": "cancellation_change_order",
+    "conf": 0.48399999737739563,
+    "decision": "ESCALATE",
+    "reason": "Low classification confidence (0.48 < 0.50). Message is ambiguous or spans multiple intents.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 26,
+    "prompt": "The website says it is too late to cancel because dispatch is imminent. What should I do when the driver arrives?",
+    "intent": "feedback_complaint",
+    "conf": 0.6539999842643738,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence feedback_complaint query (65.4%) backed by strong historical precedents (top match: 0.60).",
+    "draft": "I'm sorry for the frustration caused by the cancellation status of your order. Please contact our support team here so we can look into your options regarding this delivery: ^AH"
+  },
+  {
+    "num": 27,
+    "prompt": "Why was my card billed $14.99 for Prime when I thought I was still on the 30-day free trial?",
+    "intent": "account_prime_billing",
+    "conf": 0.9678000211715698,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence account_prime_billing query (96.8%) backed by strong historical precedents (top match: 0.73).",
+    "draft": "I apologize for the confusion regarding your Prime membership charge. Please reach out to us via DM with your account details so we can review your billing history and membership status. ^AH"
+  },
+  {
+    "num": 28,
+    "prompt": "I am unable to sign into my account because the 2-factor OTP code isn't arriving on my phone.",
+    "intent": "account_prime_billing",
+    "conf": 0.5335000157356262,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence account_prime_billing query (53.4%) backed by strong historical precedents (top match: 0.59).",
+    "draft": "I'm sorry to hear you're having trouble receiving your verification code. Please reach out to us at this link so we can look into this further for you: http://amzn.to/359S0qT ^AH"
+  },
+  {
+    "num": 29,
+    "prompt": "How do I remove an expired credit card from my 1-Click payment settings?",
+    "intent": "account_prime_billing",
+    "conf": 0.5892000198364258,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence account_prime_billing query (58.9%) backed by strong historical precedents (top match: 0.63).",
+    "draft": "I'm sorry for the trouble you're having with your payment settings. Please reach out to us via phone or chat here so we can troubleshoot this for you directly: https://amzn.to/38u3bB4 ^AH"
+  },
+  {
+    "num": 30,
+    "prompt": "Can I share my Amazon Prime shipping benefits with my spouse through Amazon Household?",
+    "intent": "account_prime_billing",
+    "conf": 0.4327000081539154,
+    "decision": "ESCALATE",
+    "reason": "Low classification confidence (0.43 < 0.50). Message is ambiguous or spans multiple intents.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 31,
+    "prompt": "I was charged twice on my statement for the exact same order #302-8819234. Please refund the duplicate charge.",
+    "intent": "return_refund_status",
+    "conf": 0.6413000226020813,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (64.1%) backed by strong historical precedents (top match: 0.68).",
+    "draft": "I am sorry to hear about the duplicate charge on your account and would like our team to review these transactions. Please provide your details here: [Link] ^AH"
+  },
+  {
+    "num": 32,
+    "prompt": "How can I download a VAT invoice for my business purchases from last quarter?",
+    "intent": "general_inquiry_greeting",
+    "conf": 0.4246000051498413,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence general_inquiry_greeting query (42.5%) backed by strong historical precedents (top match: 0.69).",
+    "draft": "You can download your VAT invoices by visiting the 'Your Orders' section in your account. If you need further assistance, our support team will be happy to help you here: https://amzn.to/3n3o34t ^AH"
+  },
+  {
+    "num": 33,
+    "prompt": "My Kindle Paperwhite is frozen on the screensaver and holding down the power button isn't rebooting it.",
+    "intent": "product_tech_support",
+    "conf": 0.7231000065803528,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence product_tech_support query (72.3%) backed by strong historical precedents (top match: 0.57).",
+    "draft": "I'm sorry to hear your Kindle is frozen, and I'd like to help you resolve this. Could you please confirm which generation Kindle Paperwhite you have so we can look into the appropriate troubleshooting steps for you? ^AH"
+  },
+  {
+    "num": 34,
+    "prompt": "My Echo Dot keeps saying 'I am having trouble understanding right now, please try a little later.' Wi-Fi is working fine.",
+    "intent": "product_tech_support",
+    "conf": 0.9958999752998352,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence product_tech_support query (99.6%) backed by strong historical precedents (top match: 0.74).",
+    "draft": "I'm sorry to hear your Echo Dot is having trouble connecting! Have you tried restarting the device, and if that doesn't resolve it, please send us a DM so we can troubleshoot this in real time. ^AH"
+  },
+  {
+    "num": 35,
+    "prompt": "How do I connect my Bluetooth headphones to the Fire TV Stick 4K?",
+    "intent": "product_tech_support",
+    "conf": 0.9431999921798706,
+    "decision": "ESCALATE",
+    "reason": "Weak historical evidence match (similarity 0.44 < 0.50). No close precedent.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 36,
+    "prompt": "The Prime Video app on my Samsung TV gives error code 5004 whenever I try to play a movie.",
+    "intent": "product_tech_support",
+    "conf": 0.95660001039505,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence product_tech_support query (95.7%) backed by strong historical precedents (top match: 0.68).",
+    "draft": "We are sorry to hear about the trouble you're having with the Prime Video app on your Samsung TV. To help us troubleshoot this, please reach out to our team via chat or phone here: http://amzn.to/3v4v45n ^AH"
+  },
+  {
+    "num": 37,
+    "prompt": "How do I deregister an old Kindle device from my Amazon account before giving it to a friend?",
+    "intent": "product_tech_support",
+    "conf": 0.6484000086784363,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence product_tech_support query (64.8%) backed by strong historical precedents (top match: 0.72).",
+    "draft": "To deregister your Kindle, please visit the \"Manage Your Content and Devices\" section on our website. You can find the steps to remove your device from your account here: [Link] ^AH"
+  },
+  {
+    "num": 38,
+    "prompt": "My Fire HD tablet won't charge beyond 1% even after leaving it plugged into the wall charger overnight.",
+    "intent": "product_tech_support",
+    "conf": 0.6245999932289124,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence product_tech_support query (62.5%) backed by strong historical precedents (top match: 0.54).",
+    "draft": "I'm sorry to hear that your Fire HD tablet is not charging properly. Please reach out to our support team via phone or chat so we can look into this for you: https://www.amazon.com/contact-us ^AH"
+  },
+  {
+    "num": 39,
+    "prompt": "Hello Amazon support! Are you guys available to chat right now?",
+    "intent": "general_inquiry_greeting",
+    "conf": 0.392300009727478,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence general_inquiry_greeting query (39.2%) backed by strong historical precedents (top match: 0.75).",
+    "draft": "Hello! We are here and happy to assist you, so please let us know how we can help. ^AH"
+  },
+  {
+    "num": 40,
+    "prompt": "Hi there! Just wanted to ask what time your customer service lines close today.",
+    "intent": "general_inquiry_greeting",
+    "conf": 0.44179999828338623,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence general_inquiry_greeting query (44.2%) backed by strong historical precedents (top match: 0.60).",
+    "draft": "We have chat options available 24/7, while our phone lines operate until midnight. I hope this helps! ^AH"
+  },
+  {
+    "num": 41,
+    "prompt": "Good morning! Hope you're having a great weekend.",
+    "intent": "general_inquiry_greeting",
+    "conf": 0.527999997138977,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence general_inquiry_greeting query (52.8%) backed by strong historical precedents (top match: 0.55).",
+    "draft": "Good morning! I hope you're having a wonderful weekend as well. ^AH"
+  },
+  {
+    "num": 42,
+    "prompt": "Hey! Quick question, do you ship to APO/FPO military addresses overseas?",
+    "intent": "delivery_issue",
+    "conf": 0.31369999051094055,
+    "decision": "ESCALATE",
+    "reason": "Low classification confidence (0.31 < 0.50). Message is ambiguous or spans multiple intents.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 43,
+    "prompt": "Hi Amazon team, where can I check the remaining balance on my gift card without applying it to an order?",
+    "intent": "return_refund_status",
+    "conf": 0.7031999826431274,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence return_refund_status query (70.3%) backed by strong historical precedents (top match: 0.67).",
+    "draft": "We're sorry to hear about this issue! We're unable to access account info via twitter. Please contact us directly to look into this: ^AH"
+  },
+  {
+    "num": 44,
+    "prompt": "Hello, can someone help me with a question regarding international shipping rates to Canada?",
+    "intent": "delivery_issue",
+    "conf": 0.5618000030517578,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence delivery_issue query (56.2%) backed by strong historical precedents (top match: 0.68).",
+    "draft": "We're sorry to hear about this issue! Hi Abbie, what is the delivery date in the order confirmation email? ^AH"
+  },
+  {
+    "num": 45,
+    "prompt": "Your delivery driver backed his delivery van into my brick driveway wall, caused huge cracks, and drove away! I have license plate footage.",
+    "intent": "feedback_complaint",
+    "conf": 0.9097999930381775,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence feedback_complaint query (91.0%) backed by strong historical precedents (top match: 0.56).",
+    "draft": "We're sorry to hear about this issue! I'm sorry to hear about this poor experience. Just to clarify, who's the carrier listed here: ^AH"
+  },
+  {
+    "num": 46,
+    "prompt": "Someone unauthorized broke into my account, wiped my linked bank account, and ordered $2,000 of Apple gift cards! Lock the account now!",
+    "intent": "account_prime_billing",
+    "conf": 0.9158999919891357,
+    "decision": "AUTO_HANDLE",
+    "reason": "High-confidence account_prime_billing query (91.6%) backed by strong historical precedents (top match: 0.61).",
+    "draft": "We're sorry to hear about this issue! Sorry to hear this, did you receive any email notification regarding the account being locked? ^AH"
+  },
+  {
+    "num": 47,
+    "prompt": "You have charged my credit card three times without consent and refuse to refund. I am contacting my attorney and filing a police report for credit fraud.",
+    "intent": "return_refund_status",
+    "conf": 0.656000018119812,
+    "decision": "ESCALATE",
+    "reason": "High-risk safety trigger detected: 'attorney'. Requires senior human specialist review.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 48,
+    "prompt": "The delivery driver was aggressive, yelled profanities at my elderly mother, and threw the package at her front door. This is unacceptable harassment.",
+    "intent": "feedback_complaint",
+    "conf": 0.9973999857902527,
+    "decision": "ESCALATE",
+    "reason": "High-risk safety trigger detected: 'harassment'. Requires senior human specialist review.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 49,
+    "prompt": "I have been waiting 45 days for my $1,200 laptop refund and your chat reps hang up on me. I am taking this to small claims court tomorrow morning.",
+    "intent": "return_refund_status",
+    "conf": 0.9484000205993652,
+    "decision": "ESCALATE",
+    "reason": "High-risk safety trigger detected: 'court'. Requires senior human specialist review.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  },
+  {
+    "num": 50,
+    "prompt": "A package arrived addressed to me containing white powder and suspicious chemicals. What authority do I report this to?",
+    "intent": "damaged_defective_item",
+    "conf": 0.35740000009536743,
+    "decision": "ESCALATE",
+    "reason": "Low classification confidence (0.36 < 0.50). Message is ambiguous or spans multiple intents.",
+    "draft": "I understand how important this issue is, and I want to ensure you receive the specialized assistance you deserve. I have routed your case directly to a senior customer support specialist for immediate review. Please stay tuned while our human team investigates this for you."
+  }
+]

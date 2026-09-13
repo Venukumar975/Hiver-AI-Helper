@@ -1,4 +1,4 @@
-﻿# Intent Taxonomy for Amazon Customer Support AI Agent
+# Intent Taxonomy for Amazon Customer Support AI Agent
 # Derived from real Customer Support on Twitter (AmazonHelp) dataset
 
 intents:
@@ -119,3 +119,22 @@ intents:
       - "Your delivery driver just threw my parcel over the 6 foot gate onto concrete and drove off!"
       - "3rd time your customer service rep hung up on me. Absolutely disgraceful service."
       - "Why are you adding commercials to Prime Video when we already pay a yearly subscription?"
+
+  general_inquiry_greeting:
+    definition: "Customer is initiating a conversation with a greeting, asking a general question about how to reach support, acknowledging a response, or sending conversational pleasantries."
+    inclusion_criteria:
+      - "Greetings and opening pleasantries (e.g., 'Hi', 'Hello', 'Ready for some help')."
+      - "General contact inquiries (e.g., 'Where can I chat with support?', 'Can someone help me?')."
+      - "Follow-up acknowledgments or status confirmations (e.g., 'Details sent', 'DM sent', 'Thank you')."
+      - "General closing pleasantries."
+    exclusion_criteria:
+      - "Specific reports of late or missing packages (use delivery_issue)."
+      - "Specific refund requests or return label inquiries (use return_refund_status)."
+      - "Specific device troubleshooting (use product_tech_support)."
+    examples:
+      - "Hi ready for some help"
+      - "where can I chat with a support member"
+      - "Details sent. Please check."
+      - "Can someone from customer support help me with an inquiry?"
+      - "Okay thank you for the information, have a great evening!"
+      - "Hello is anyone available to help?"

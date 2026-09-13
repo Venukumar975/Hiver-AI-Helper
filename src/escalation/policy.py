@@ -1,17 +1,22 @@
-﻿import re
-from typing import Dict, Any, List
+import re
+from typing import Dict, Any, List, Optional
 
 class EscalationPolicy:
     """
     Conservative Escalation Gatekeeper for Customer Support AI Agent.
     Prioritizes minimizing FALSE AUTO-HANDLES (i.e. incorrectly auto-handling a risky issue).
     
-    Decision Signals evaluated:
-      1. Intent Classifier Confidence (threshold: 0.70)
-      2. Retrieval Quality / Semantic Support (threshold: 0.50)
-      3. Risk & Safety Keywords (legal, fraud, hacked, dispute, threat, abusive language)
-      4. High-Risk / Sensitive Domains (unauthorized transactions, driver misconduct)
-      5. Excessive ambiguity (extremely brief queries lacking context)
+    Two-Stage Architecture:
+      Stage 1 (Pre-Retrieval Gate):
+        - Evaluates Intent Classifier Confidence (threshold: 0.50, 0.25 for greetings)
+        - Risk & Safety Keywords (legal, fraud, hacked, dispute, threat, abusive language)
+        - High-frustration sentiment on complaints
+        - Message brevity / context absence
+        -> If ANY check fails: Immediately ESCALATE (Skip RAG, 0 docs retrieved).
+      Stage 2 (Post-Retrieval Gate):
+        - Evaluates historical precedent similarity (threshold: 0.50)
+        -> If top match < 0.50: ESCALATE (weak evidence).
+        -> If match >= 0.50: AUTO_HANDLE with grounded draft.
     """
     
     CONFIDENCE_THRESHOLD = 0.50
@@ -29,19 +34,15 @@ class EscalationPolicy:
         self.confidence_threshold = confidence_threshold
         self.retrieval_threshold = retrieval_threshold
 
-    def evaluate(
+    def evaluate_pre_retrieval(
         self,
         customer_message: str,
         predicted_intent: str,
-        confidence: float,
-        retrieved_cases: List[Dict[str, Any]]
+        confidence: float
     ) -> Dict[str, str]:
         """
-        Returns:
-          {
-            "decision": "AUTO_HANDLE" | "ESCALATE",
-            "reason": "<Explicit justification>"
-          }
+        Stage 1: Pre-Retrieval Safety & Confidence Gate.
+        Decides whether it is even safe / necessary to query the FAISS RAG index.
         """
         # Signal 1: Check High-Risk / Legal / Fraud Keywords
         for pattern in self.RISK_PATTERNS:
@@ -53,28 +54,14 @@ class EscalationPolicy:
                 }
 
         # Signal 2: Classifier Confidence
-        if confidence < self.CONFIDENCE_THRESHOLD:
+        effective_conf_thresh = 0.25 if predicted_intent == "general_inquiry_greeting" else self.CONFIDENCE_THRESHOLD
+        if confidence < effective_conf_thresh:
             return {
                 "decision": "ESCALATE",
-                "reason": f"Low classification confidence ({confidence:.2f} < {self.CONFIDENCE_THRESHOLD:.2f}). Message is ambiguous or spans multiple intents."
+                "reason": f"Low classification confidence ({confidence:.2f} < {effective_conf_thresh:.2f}). Message is ambiguous or spans multiple intents."
             }
 
-        # Signal 3: Historical Evidence Support
-        if not retrieved_cases:
-            return {
-                "decision": "ESCALATE",
-                "reason": "Zero matching historical resolution cases found in knowledge base."
-            }
-            
-        top_score = retrieved_cases[0].get("similarity_score", 0.0)
-        if top_score < self.RETRIEVAL_SIMILARITY_THRESHOLD:
-            return {
-                "decision": "ESCALATE",
-                "reason": f"Weak historical evidence match (similarity {top_score:.2f} < {self.RETRIEVAL_SIMILARITY_THRESHOLD:.2f}). No close precedent."
-            }
-
-        # Signal 4: Intent-specific policy checks
-        # Feedback complaints with abusive or high frustration sentiment escalate to customer relations
+        # Signal 3: Intent-specific policy checks
         if predicted_intent == "feedback_complaint":
             words = customer_message.lower().split()
             if any(w in words for w in ["worst", "terrible", "disgrace", "horrible", "disgusting", "never"]):
@@ -83,45 +70,77 @@ class EscalationPolicy:
                     "reason": "Severe customer dissatisfaction/complaint requires human supervisor empathy and de-escalation."
                 }
 
-        # Signal 5: Length & Context check
-        if len(customer_message.strip().split()) <= 4:
+        # Signal 4: Length & Context check (exempt greetings/pleasantries as they are naturally brief)
+        if predicted_intent != "general_inquiry_greeting" and len(customer_message.strip().split()) <= 4:
             return {
                 "decision": "ESCALATE",
                 "reason": "Message is too brief and lacks essential context for autonomous resolution."
             }
 
-        # If all conservative checks pass:
+        # Passes pre-retrieval checks -> Safe to query RAG
+        return {
+            "decision": "PROCEED_TO_RETRIEVAL",
+            "reason": f"High-confidence {predicted_intent} ({confidence*100:.1f}%). Safe to retrieve precedents."
+        }
+
+    def evaluate_retrieval_quality(
+        self,
+        customer_message: str,
+        predicted_intent: str,
+        confidence: float,
+        retrieved_cases: List[Dict[str, Any]]
+    ) -> Dict[str, str]:
+        """
+        Stage 2: Post-Retrieval Quality Gate.
+        Verifies that retrieved precedents are close enough to safely ground a response.
+        """
+        if not retrieved_cases:
+            return {
+                "decision": "ESCALATE",
+                "reason": "Zero matching historical resolution cases found in knowledge base."
+            }
+            
+        top_score = retrieved_cases[0].get("similarity_score", 0.0)
+        effective_ret_thresh = 0.30 if predicted_intent == "general_inquiry_greeting" else self.RETRIEVAL_SIMILARITY_THRESHOLD
+        if top_score < effective_ret_thresh:
+            return {
+                "decision": "ESCALATE",
+                "reason": f"Weak historical evidence match (similarity {top_score:.2f} < {effective_ret_thresh:.2f}). No close precedent."
+            }
+
         return {
             "decision": "AUTO_HANDLE",
             "reason": f"High-confidence {predicted_intent} query ({confidence*100:.1f}%) backed by strong historical precedents (top match: {top_score:.2f})."
         }
 
+    def evaluate(
+        self,
+        customer_message: str,
+        predicted_intent: str,
+        confidence: float,
+        retrieved_cases: Optional[List[Dict[str, Any]]] = None
+    ) -> Dict[str, str]:
+        """
+        Unified evaluation endpoint (combines Stage 1 and Stage 2).
+        """
+        pre_result = self.evaluate_pre_retrieval(customer_message, predicted_intent, confidence)
+        if pre_result["decision"] == "ESCALATE":
+            return pre_result
+
+        return self.evaluate_retrieval_quality(
+            customer_message,
+            predicted_intent,
+            confidence,
+            retrieved_cases or []
+        )
+
 if __name__ == "__main__":
     policy = EscalationPolicy()
     
-    # Test 1: Routine
-    res1 = policy.evaluate(
-        customer_message="Where is my package? It was supposed to be delivered yesterday.",
-        predicted_intent="delivery_issue",
-        confidence=0.89,
-        retrieved_cases=[{"case_id": "conv_1", "similarity_score": 0.75}]
-    )
-    print("Test 1 (Routine Delivery):", res1)
-    
-    # Test 2: Legal Threat
-    res2 = policy.evaluate(
-        customer_message="I have not received my order and I am calling my lawyer to sue you for fraud!",
-        predicted_intent="delivery_issue",
-        confidence=0.92,
-        retrieved_cases=[{"case_id": "conv_1", "similarity_score": 0.72}]
-    )
-    print("Test 2 (Legal Threat):", res2)
-    
-    # Test 3: Low Confidence
-    res3 = policy.evaluate(
-        customer_message="Can you please check on the thing we discussed earlier?",
-        predicted_intent="general",
-        confidence=0.45,
-        retrieved_cases=[{"case_id": "conv_1", "similarity_score": 0.40}]
-    )
-    print("Test 3 (Low Confidence):", res3)
+    # Test 1: Low confidence (< 0.50) -> Should ESCALATE before retrieval
+    p1 = policy.evaluate_pre_retrieval("I want to know", "delivery_issue", 0.38)
+    print("Test 1 (Low Conf):", p1)
+
+    # Test 2: High confidence (0.85) -> Should PROCEED_TO_RETRIEVAL
+    p2 = policy.evaluate_pre_retrieval("Where is my package? Tracking 123", "delivery_issue", 0.85)
+    print("Test 2 (High Conf):", p2)

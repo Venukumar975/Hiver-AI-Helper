@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 import re
 import joblib
@@ -23,7 +23,6 @@ def build_resolution_index(
     print("=" * 65)
     
     os.makedirs(output_dir, exist_ok=True)
-    from evaluation.build_golden_set import INTENT_PATTERNS
     
     cases: List[Dict[str, Any]] = []
     texts_to_embed: List[str] = []
@@ -40,12 +39,9 @@ def build_resolution_index(
             if len(c_text) < 15 or len(b_text) < 15:
                 continue
                 
-            # Assign intent tag to historical case
-            assigned_intent = "general"
-            for intent, patterns in INTENT_PATTERNS.items():
-                if any(re.search(p, c_text, re.IGNORECASE) for p in patterns):
-                    assigned_intent = intent
-                    break
+            assigned_intent = data.get("intent") or data.get("nli_intent", "general_inquiry_greeting")
+            if assigned_intent == "general_unclassified":
+                assigned_intent = "general_inquiry_greeting"
                     
             cases.append({
                 "case_id": data["conversation_id"],

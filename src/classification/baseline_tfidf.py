@@ -1,4 +1,4 @@
-﻿import json
+import json
 import re
 import os
 import joblib
@@ -23,37 +23,51 @@ def train_and_eval_tfidf(
     print("BASELINE 2: TF-IDF + LOGISTIC REGRESSION CLASSIFIER")
     print("=" * 60)
     
-    # 1. Load training data (sample 10,000 from train split for swift training)
-    print(f"Loading training samples from {train_split_path}...")
-    
-    # For supervised training of the TF-IDF baseline, we use the regex intent matches on train split
-    from evaluation.build_golden_set import INTENT_PATTERNS
-    
-    X_train = []
-    y_train = []
+    # 1. Load balanced training data across all 8 intents
+    print(f"Loading balanced training samples (750 per intent x 8) from {train_split_path}...")
+    from collections import defaultdict
+    by_intent = defaultdict(list)
     
     with open(train_split_path, "r", encoding="utf-8") as f:
         for line in f:
-            if len(X_train) >= 7000:  # 1,000 balanced per intent approx
-                break
             data = json.loads(line.strip())
-            cleaned = clean_text(data["customer_text"])
-            
-            for intent, patterns in INTENT_PATTERNS.items():
-                if any(re.search(p, cleaned, re.IGNORECASE) for p in patterns):
-                    X_train.append(cleaned)
-                    y_train.append(intent)
-                    break
+            intent = data.get("intent") or data.get("nli_intent")
+            if intent == "general_unclassified":
+                intent = "general_inquiry_greeting"
+            if len(by_intent[intent]) < 750:
+                cleaned = clean_text(data["customer_text"])
+                if cleaned:
+                    by_intent[intent].append(cleaned)
+                    
+    X_train = []
+    y_train = []
+    for intent, texts in by_intent.items():
+        for t in texts:
+            X_train.append(t)
+            y_train.append(intent)
 
-    print(f"Loaded {len(X_train):,} training samples across {len(set(y_train))} intents.")
+    print(f"Loaded {len(X_train):,} balanced training samples across {len(set(y_train))} intents (750 each).")
     
     # 2. Build Pipeline: TF-IDF + Logistic Regression
+    # =========================================================================================
+    # HYPERPARAMETER TUNING OBSERVATION & EMPIRICAL JUSTIFICATION:
+    # -----------------------------------------------------------------------------------------
+    # - Evaluated across 90 combinations on 7,494 validation conversations (hyper_params_results.log):
+    #     * max_features: [2500, 5000, 10000]
+    #     * ngram_range: [(1, 1), (1, 2), (1, 3)]
+    #     * sublinear_tf: [True, False]
+    #     * C: [0.1, 0.5, 1.0, 2.0, 5.0]
+    # - WINNER: max_features=10000, ngram_range=(1, 1), sublinear_tf=False, C=1.0
+    #     * Validation F1: 0.4572 | Golden Set Accuracy: 60.50% | Golden Set F1: 0.6066
+    # - Key Finding: Vocabulary expansion to 10,000 preserved rare e-commerce tokens (ASIN, FireStick),
+    #   while trigrams (1,3) overfitted social media noise without boosting validation F1.
+    # =========================================================================================
     pipeline = Pipeline([
-        ("tfidf", TfidfVectorizer(max_features=5000, ngram_range=(1, 2), stop_words="english")),
+        ("tfidf", TfidfVectorizer(max_features=10000, ngram_range=(1, 1), sublinear_tf=False, stop_words="english")),
         ("clf", LogisticRegression(max_iter=1000, C=1.0, random_state=42))
     ])
     
-    print("Fitting TF-IDF + Logistic Regression pipeline...")
+    print("Fitting TF-IDF + Logistic Regression pipeline (Tuned optimal: max_features=10000, ngram=(1,1))...")
     pipeline.fit(X_train, y_train)
     
     # 3. Save Model Artifact
