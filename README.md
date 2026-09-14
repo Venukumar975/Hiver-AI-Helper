@@ -17,12 +17,12 @@ An end-to-end AI customer support agent project that:
 - [🏗️ High-Level System Architecture](#️-high-level-system-architecture)
   - [⚡ Two Decision Outcomes At A Glance](#-two-decision-outcomes-at-a-glance)
 - [📊 Dataset Engineering & Sampling Strategy](#-dataset-engineering--sampling-strategy)
-  - [1. Raw Dataset Overview](#1-raw-dataset-overview)
-  - [2. Conversation Reconstruction & Quality Filtering](#2-conversation-reconstruction--quality-filtering)
-  - [3. Intent Distribution Across 50,000 Dataset (NLI-Tagged)](#3-intent-distribution-across-the-entire-50000-dataset)
+  - [1. Data Pipeline & Filtering](#1-data-pipeline--filtering)
+  - [2. Why Zero-Shot NLI for Intent Tagging?](#2-why-zero-shot-nli-for-intent-tagging)
+  - [3. Intent Breakdown across 50,000 Conversations](#3-intent-breakdown-across-50000-conversations)
   - [4. Dataset Lineage & Splitting Architecture](#4-dataset-lineage--splitting-architecture)
-  - [5. Stratified Data Splitting (0% Leakage Guarantee)](#5-data-splitting-stratified-conversation-level-isolation-0-leakage)
-  - [6. Class Imbalance Mitigation (Balanced 6,000 Subset)](#6-why-train-on-6000-balanced-samples-instead-of-all-35000-class-imbalance-mitigation)
+  - [5. Stratified Splitting (0% Data Leakage)](#5-stratified-splitting-0-data-leakage)
+  - [6. Balanced 6,000 Training Subset (Class Imbalance Mitigation)](#6-balanced-6000-training-subset-class-imbalance-mitigation)
 - [🏷️ Intent Taxonomy & 200 Golden Set Distribution](#️-intent-taxonomy--200-golden-set-distribution)
 - [📊 Empirical Benchmark Results (200 Held-Out Golden Set)](#-empirical-benchmark-results-200-held-out-golden-set)
   - [1. Intent Classification: Model Progression](#1-intent-classification-model-progression)
@@ -94,36 +94,63 @@ flowchart TD
 
 ## 📊 Dataset Engineering & Sampling Strategy
 
-### 1. Raw Dataset Overview
-- **Source**: Kaggle *Customer Support on Twitter* (`twcs.csv`).
-- **Total Volume**: **2,811,774 raw tweets** across dozens of brands (Apple, Uber, Spotify, Delta, Amazon, etc.).
-- **Brand Selection**: We scanned all 2.8M rows and selected **`@AmazonHelp`**, the #1 brand with **169,840 official brand tweets**, offering the richest diversity of tangible e-commerce issues (deliveries, refunds, returns, defective goods, and Prime subscriptions).
+### 1. Data Pipeline & Filtering
 
-### 2. Conversation Reconstruction & Quality Filtering
-- Tweets on Twitter are isolated rows linked by parent/reply IDs.
-- We reconstructed raw rows into complete, coherent **(Customer Issue $\rightarrow$ Brand Resolution)** pairs.
-- After filtering out conversational noise (1-word greetings like "hi", emojis, and unhelpful responses), we created a clean, self-contained corpus of **50,000 high-signal conversations** (`data/processed/amazon_conversations.jsonl`).
+From 2.8M raw customer tweets down to 50,000 clean, high-signal Amazon support conversations:
 
-### 3. Intent Distribution Across the Entire 50,000 Dataset
-Tagged using our deep **Zero-Shot Cross-Encoder NLI model (`facebook/bart-large-mnli`)** on a Google Colab Nvidia T4 GPU (FP16, batch size 128), evaluating both customer message and Amazon agent resolution for 100% ground-truth context. Complete Colab pipeline code, prompt templates, and why keyword rules failed are documented in **[`docs/NLI_INTENT_TAGGING.md`](docs/NLI_INTENT_TAGGING.md)**:
+```mermaid
+flowchart LR
+    classDef step fill:#ffffff,stroke:#111827,stroke-width:2px,color:#000000;
+    A["📁 Raw Kaggle Tweets\n(2,811,774 rows)"]:::step -->|"Filter @AmazonHelp"| B["🏷️ Brand Tweets\n(169,840 rows)"]:::step
+    B -->|"Reconstruct threads & clean"| C["💬 Clean Turn Pairs\n(50,000 conversations)"]:::step
+```
 
-| Intent Category | Count in 50,000 Dataset | % of Total | Operational Description |
+- **Brand Selected**: `@AmazonHelp` (highest volume and tangible e-commerce issues: refunds, deliveries, broken goods).
+- **Thread Reconstruction**: Linked scattered tweet IDs into complete **(Customer Question $\rightarrow$ Amazon Resolution)** pairs while filtering greetings and unhelpful noise.
+
+---
+
+### 2. Why Zero-Shot NLI for Intent Tagging?
+
+> 📖 **Full Implementation & Colab Pipeline**: **[`docs/NLI_INTENT_TAGGING.md`](docs/NLI_INTENT_TAGGING.md)**  
+> 🔗 **Interactive Cloud Notebook**: **[Google Colab (facebook/bart-large-mnli)](https://colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH?usp=sharing)**  
+> ⚖️ **Architectural Decision #1**: **[`docs/DECISIONS.md#decision-1-zero-shot-nli-facebookbart-large-mnli-over-keyword-rules-for-large-scale-corpus-tagging`](docs/DECISIONS.md)**
+
+Raw tweets contain polysemy (*"charge"* = battery vs. fee), sarcasm (*"thanks for throwing my package"*), and negations (*"did not cancel"*). Simple keyword heuristics misclassify >60% of cases.
+
+We used **Zero-Shot NLI (`facebook/bart-large-mnli`)** on a Colab T4 GPU:
+- **Premise**: Customer tweet + Amazon agent's official resolution.
+- **Hypothesis**: *"This customer issue is about {intent}."*
+- **Why it works**: Entailment checks both the symptom and how Amazon solved it, eliminating ambiguity in vague queries.
+
+```mermaid
+flowchart TD
+    classDef box fill:#ffffff,stroke:#111827,stroke-width:2px,color:#000000;
+    classDef nli fill:#ffffff,stroke:#0284c7,stroke-width:2.5px,color:#000000;
+
+    P["📝 Premise: Customer Tweet + Official Resolution"]:::box --> M["🧠 Cross-Encoder NLI (bart-large-mnli)"]:::nli
+    H["🎯 Hypothesis: 'This customer issue is about {intent}'"]:::box --> M
+    M -->|"Highest Entailment Probability"| OUT["🏷️ Verified Ground-Truth Intent Label"]:::box
+```
+
+---
+
+### 3. Intent Breakdown across 50,000 Conversations
+
+| Intent Category | Count | % Share | Core Problem Space |
 | :--- | :---: | :---: | :--- |
-| `general_inquiry_greeting` | **22,166 conversations** | 44.3% | Greetings, pleasantries (*"Hi ready for help"*), general chat links, status inquiries |
-| `delivery_issue` | **13,089 conversations** | 26.2% | Late packages, carrier delays, marked delivered but missing |
-| `damaged_defective_item` | **4,986 conversations** | 10.0% | Broken items, leaking shampoo, shattered glass, wrong item |
-| `cancellation_change_order`| **2,977 conversations** | 6.0% | Pre-dispatch cancellation, address modification |
-| `return_refund_status` | **2,895 conversations** | 5.8% | Return tracking, refund timeline, drop-off locations |
-| `account_prime_billing` | **1,643 conversations** | 3.3% | Unauthorized charges, Prime membership, 2FA/login lockouts |
-| `product_tech_support` | **1,142 conversations** | 2.3% | Echo/Alexa setups, FireTV reboot loops, Kindle sync |
-| `feedback_complaint` | **1,102 conversations** | 2.2% | Driver conduct, property damage, customer service complaints |
-| **Total Processed** | **50,000 conversations** | **100.0%** | Full verified dataset stored in `data/processed/` |
+| `general_inquiry_greeting` | **22,166** | 44.3% | Greetings, pleasantries, general contact links |
+| `delivery_issue` | **13,089** | 26.2% | Late packages, carrier delays, missing tracking |
+| `damaged_defective_item` | **4,986** | 10.0% | Broken items, leaking shampoo, wrong item delivered |
+| `cancellation_change_order`| **2,977** | 6.0% | Pre-dispatch cancellation, address modification |
+| `return_refund_status` | **2,895** | 5.8% | Return drop-off status, refund timelines |
+| `account_prime_billing` | **1,643** | 3.3% | Prime renewal, unauthorized charges, 2FA locks |
+| `product_tech_support` | **1,142** | 2.3% | Echo/Alexa setups, FireStick reboot loops, Kindle sync |
+| `feedback_complaint` | **1,102** | 2.2% | Delivery driver conduct, serious customer complaints |
 
 ---
 
 ### 4. Dataset Lineage & Splitting Architecture
-
-The complete lifecycle from 2.8M raw Twitter customer support rows down to our training, validation, FAISS knowledge base, and benchmark 200 Golden Set:
 
 ```mermaid
 flowchart TD
@@ -164,24 +191,22 @@ flowchart TD
 
 ---
 
-### 5. Data Splitting: Stratified Conversation-Level Isolation (0% Leakage)
-To prevent **evaluation data leakage**, the 50,000 conversations were split strictly at the **Conversation Level** using stratified sampling across all 8 intents:
+### 5. Stratified Splitting (0% Data Leakage)
+- Split strictly by **`conversation_id`** (70% Train / 15% Val / 15% Test) across all 8 intents.
+- Zero leakage: No customer query and brand resolution pair ever crosses between splits.
 
-| Split | Percentage | Conversations | Purpose in System |
+| Split | Percentage | Conversations | Downstream Use |
 | :--- | :---: | :---: | :--- |
-| **Train Set** | **70%** | 34,997 | • Knowledge Base source for FAISS vector index (15,000 indexed cases)<br>• Training pool for supervised classification heads |
-| **Validation Set** | **15%** | 7,496 | • Hyperparameter tuning & escalation confidence threshold calibration |
-| **Held-Out Test Set** | **15%** | 7,507 | • Source for sampling our benchmark 200 Golden Evaluation Set |
+| **Train Set** | **70%** | 34,997 | FAISS Knowledge Base (15,000 cases) & training classifier heads |
+| **Validation Set** | **15%** | 7,496 | 134-run hyperparameter grid search & threshold calibration |
+| **Test Set** | **15%** | 7,507 | Source for sampling the benchmark 200 Golden Evaluation Set |
 
-> **Zero Leakage Guarantee**: No customer question and no brand reply from the same conversation thread ever crosses between Train, Validation, and Test partitions (verified 0 ID overlap).
+---
 
-### 6. Why Train on 6,000 Balanced Samples Instead of All 35,000? (Class Imbalance Mitigation)
-In the 35,000 training conversations, natural frequency is skewed (`general_inquiry_greeting` has 15,516 rows while `feedback_complaint` has 771 rows).
-
-- If a linear model is trained on all 35,000 raw rows without balancing, it becomes **heavily biased toward majority classes**, ignoring minority intents.
-- To eliminate bias, we extracted an **empirically balanced subset of 6,000 training samples (exactly 750 per intent across all 8 categories)**:
-  $$8 \times 750 = \mathbf{6,000 \text{ balanced samples}}$$
-- This gives every intent equal representation (12.5% each), ensuring balanced F1-scores across all classes and allowing the entire evaluation pipeline to execute in **~60 seconds** on a normal CPU!
+### 6. Balanced 6,000 Training Subset (Class Imbalance Mitigation)
+- Natural training data is skewed (15.5k greetings vs. 771 complaints).
+- To prevent majority-class bias, we sampled an **empirically balanced subset of 6,000 samples (750 per intent $\times$ 8)**.
+- Result: Equal class representation, balanced F1 scores, and sub-60-second execution on CPU!
 
 ---
 
@@ -207,11 +232,15 @@ Below are the definitions and the **exact number of samples in our 200 Golden Ev
 
 ## 📊 Empirical Benchmark Results (200 Held-Out Golden Set)
 
-> ⏱️ **Total Runtime**: **49.6 seconds** on CPU | Evaluated on 200 manually verified held-out samples (`test.jsonl`, 0% data leakage).
+> ⏱️ **Total Runtime**: **51.4 seconds** on CPU | Evaluated on 200 manually verified held-out samples (`test.jsonl`, 0% data leakage).  
+> 📄 Complete standalone results document: **[`results/RESULTS.md`](results/RESULTS.md)** | Machine-readable metrics: **[`results/evaluation_results.json`](results/evaluation_results.json)**.
 
 ---
 
 ### 1. Intent Classification: Model Progression
+
+> 📄 **Complete Benchmark Report**: **[`results/RESULTS.md`](results/RESULTS.md)** | **Full Engineering Report**: **[`docs/REPORT.md#2-intent-classification--baseline-progression`](docs/REPORT.md)**  
+> ⚖️ **Architecture Decisions**: [Decision #5 (Baselines)](docs/DECISIONS.md#decision-5-implementing-trivial-majority-and-classical-ml-tf-idf-baselines) & [Decision #6 (Sentence-Transformers)](docs/DECISIONS.md#decision-6-sentence-transformers-all-minilm-l6-v2-for-intent-classification)
 
 | Model Tier | Architecture | Accuracy | Macro F1 | Weighted F1 | Calibrated? | What This Means in 1 Line |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -256,6 +285,9 @@ We ran an exhaustive grid search across 134 configurations on the **entire 7,494
 
 ### 4. Vector Retrieval Benchmark: FAISS Index (15,000 Cases)
 
+> ⚖️ **Architecture Decisions**: [Decision #7 (Intent-Aware Filtering)](docs/DECISIONS.md#decision-7-intent-aware-vector-filtering-faiss-flatip) & [Decision #8 (Resolved Pair Indexing)](docs/DECISIONS.md#decision-8-indexing-resolved-conversation-pairs-rather-than-raw-tweets)  
+> 📄 **Deep Dive in Report**: **[`docs/REPORT.md#3-retrieval-engine-proving-intent-aware-retrieval-faiss`](docs/REPORT.md)**
+
 | Retrieval Strategy | Recall@1 | Recall@3 | Recall@5 | MRR | Why It Matters |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Naive Semantic Search** | 42.00% | 66.50% | 76.50% | 0.5558 | Confuses surface phrases (*"waiting 5 days"* for package vs refund). |
@@ -264,6 +296,9 @@ We ran an exhaustive grid search across 134 configurations on the **entire 7,494
 ---
 
 ### 5. Conservative Escalation Gatekeeper Benchmark
+
+> ⚖️ **Architecture Decisions**: [Decision #9 (Conservative Escalation)](docs/DECISIONS.md#decision-9-conservative-escalation-over-aggressive-automation) & [Decision #10 (Multi-Signal Routing)](docs/DECISIONS.md#decision-10-multi-signal-escalation-architecture)  
+> 📄 **Deep Dive in Report**: **[`docs/REPORT.md#5-escalation-decision-gatekeeper`](docs/REPORT.md)**
 
 | Metric | Score | Operational Business Impact |
 | :--- | :---: | :--- |
@@ -282,6 +317,9 @@ We ran an exhaustive grid search across 134 configurations on the **entire 7,494
 ---
 
 ### 6. LLM-as-a-Judge vs. Human Rating Agreement (50-Sample Study)
+
+> ⚖️ **Architecture Decisions**: [Decision #12 (5-Criteria Rubric)](docs/DECISIONS.md#decision-12-llm-as-a-judge-with-5-criteria-rubric) & [Decision #13 (Human Validation)](docs/DECISIONS.md#decision-13-empirical-validation-of-llm-judge-against-human-ratings)  
+> 📄 **Deep Dive in Report**: **[`docs/REPORT.md#4-response-generation--llm-as-a-judge-evaluation`](docs/REPORT.md)**
 
 | Agreement Metric | Value | Interpretation |
 | :--- | :---: | :--- |
@@ -431,19 +469,62 @@ hiver-support-agent/
 ---
 
 ## 📑 Core Documentation Deliverables
-- **Zero-Shot NLI Tagging Pipeline**: See [docs/NLI_INTENT_TAGGING.md](docs/NLI_INTENT_TAGGING.md) (Full Google Colab T4 GPU script, prompt template, keyword rule failure analysis, and 50k distribution).
-- **Engineering Decision Log (13 Decisions)**: See [docs/DECISIONS.md](docs/DECISIONS.md)
-- **Comprehensive 6-Page Report**: See [docs/REPORT.md](docs/REPORT.md)
-  - Includes the mandatory section: *"What is misleading about my headline number?"*
-  - Top 5 real failure modes with real tweet examples, hypotheses, and fixes.
-  - "What I would do with one more week."
+
+| Deliverable | File Link | What It Covers |
+| :--- | :--- | :--- |
+| **Comprehensive 6-Page Report** | [`docs/REPORT.md`](docs/REPORT.md) | Problem framing, baseline results, top 5 failure modes with real examples, the mandatory section *"What is misleading about my headline number?"*, and 1-week future roadmap. |
+| **Engineering Decision Log** | [`docs/DECISIONS.md`](docs/DECISIONS.md) | 13 non-obvious engineering decisions, trade-offs, evaluated alternatives, and downstream consequences (starting with Zero-Shot NLI on T4 GPU). |
+| **Complete Benchmark Scorecard** | [`results/RESULTS.md`](results/RESULTS.md) | Full empirical scorecard consolidating intent classification accuracies, per-class F1-scores, FAISS retrieval recall (100% vs 42%), and escalation metrics. |
+| **Zero-Shot NLI GPU Tagging Pipeline** | [`docs/NLI_INTENT_TAGGING.md`](docs/NLI_INTENT_TAGGING.md) | Colab T4 GPU walkthrough, public notebook link, FP16 batching pipeline, keyword failure analysis, and 50k empirical distribution. |
+| **Automated Evaluation Output** | [`docs/BENCHMARK_REPORT.md`](docs/BENCHMARK_REPORT.md) | Markdown report generated automatically by running `python -m evaluation.run_all` (< 60s runtime). |
 
 ---
 
-## 📜 Citations & Attributions
-1. **Dataset**: *Customer Support on Twitter* (`twcs.csv`), curated by Kaggle user `thoughtvector`. [Kaggle Link](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter).
-2. **Dense Embeddings**: `all-MiniLM-L6-v2` via `sentence-transformers` (Reimers & Gurevych, 2019 / Wang et al., 2020).
-3. **Vector Index Engine**: `FAISS` (Facebook AI Research, Johnson et al., 2019).
-4. **Classical ML Framework**: `scikit-learn` (Pedregosa et al., 2011) for TF-IDF, Logistic Regression, and metrics.
-5. **Generative Model**: Google `Gemini 3.6 Flash` accessed via the `google-genai` SDK.
-6. **Web Dashboard**: `Streamlit` (Streamlit Inc.).
+## 📜 Citations & References
+
+The following datasets, models, and open-source libraries were utilized in this system:
+
+### 1. Dataset Attributions
+- **Customer Support on Twitter (`twcs.csv`)**: Curated by Kaggle user `thoughtvector`. Contains ~2.8M customer support tweets across 30+ brands.
+  - *Where used*: Source data filtered for `@AmazonHelp` interactions (`src/data/conversation_builder.py`).
+  - *What we engineered*: Custom parent-reply thread reconstruction, deduplication, text normalization, and conversation-level train/val/test splitting (`src/data/splitter.py`).
+- **Banking77 Dataset (PolyAI / Casanueva et al., 2020)**: Off-the-shelf banking intent taxonomy evaluated and deliberately rejected in favor of an e-commerce taxonomy tailored to Amazon's tangible operational flows (`src/taxonomy/intents.yaml`, `docs/DECISIONS.md`).
+
+---
+
+### 2. Pre-Trained Model Attributions
+- **Cross-Encoder NLI: `facebook/bart-large-mnli`** (Lewis et al., 2019 / Yin et al., 2019, Meta AI):
+  - *Paper*: *"BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension"* & *"Benchmarking Zero-shot Text Classification: Datasets, Evaluation and Entailment Approach"*.
+  - *Where used*: Google Colab T4 GPU zero-shot tagging script (`docs/NLI_INTENT_TAGGING.md`) to create silver labels for 50,000 conversations.
+  - *What we engineered*: Formulated intent classification as premise-hypothesis entailment pairing the customer message with official Amazon agent resolution text for 100% context resolution.
+- **Bi-Encoder Sentence Embeddings: `sentence-transformers/all-MiniLM-L6-v2`** (Wang et al., 2020 / Reimers & Gurevych, 2019):
+  - *Paper*: *"MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers"* & *"Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"*.
+  - *Where used*: Dense feature extraction in `src/classification/classifier.py` and query/case vectorization in `src/retrieval/indexer.py`, `src/retrieval/retriever.py`.
+  - *What we engineered*: Frozen 384-dimensional embeddings fitted with a balanced Logistic Regression head calibrated via softmax to output genuine confidence probabilities.
+
+---
+
+### 3. Open-Source Libraries & Code Components
+- **FAISS (`faiss-cpu`)** (Johnson, Douze, & Jégou, Meta AI, 2019):
+  - *Paper*: *"Billion-scale similarity search with GPUs"*, IEEE Transactions on Big Data.
+  - *Where used*: `src/retrieval/indexer.py` and `src/retrieval/retriever.py`.
+  - *What we engineered*: Built an **Intent-Aware Partitioning Layer** where FAISS searches (`IndexFlatIP` on L2-normalized vectors) are strictly filtered by predicted intent buckets, jumping Recall@1 from 42% to 100%.
+- **scikit-learn** (Pedregosa et al., JMLR 2011):
+  - *Modules used*: `TfidfVectorizer`, `LogisticRegression`, `accuracy_score`, `f1_score`, `classification_report`.
+  - *Where used*: `src/classification/baseline_tfidf.py`, `src/classification/baseline_majority.py`, `src/classification/classifier.py`.
+  - *What we engineered*: Tuned hyperparameters across 134 grid search runs (`scripts/hyperparam_tuning.py`).
+- **SciPy (`scipy.stats.spearmanr`)** (Virtanen et al., Nature Methods 2020):
+  - *Where used*: `evaluation/human_evaluation.py` to calculate rank correlation between LLM judge scores and human ground-truth ratings.
+- **Streamlit** (Streamlit Inc.):
+  - *Where used*: `app/streamlit_app.py` for interactive visualization of customer tweets, live intent classification, multi-signal escalation gating, model fallback tracing, and benchmark verification.
+
+---
+
+### 4. Generative Models & Evaluator Patterns
+- **Google Gemini 3.6 Flash** (`google-genai` SDK):
+  - *Where used*: `src/generation/generator.py` (Response drafting) and `evaluation/llm_judge.py` (Evaluation).
+  - *What we engineered*: Dynamic prioritized model cascade from `models.ini`, negative-constraint prompt engineering preventing link hallucination, brand persona enforcement (`^AH`), and offline precedent synthesis fallback.
+- **LLM-as-a-Judge Pattern** (Zheng et al., NeurIPS 2023 - MT-Bench / Liu et al., 2023 - G-Eval):
+  - *Paper*: *"Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"*.
+  - *Where used*: `evaluation/llm_judge.py` and `evaluation/human_evaluation.py`.
+  - *What we engineered*: Developed a domain-specific 5-criteria rubric for e-commerce customer support (Groundedness, Relevance, Helpfulness, Brand Consistency, Safety) validated empirically against 50 human judgments (MAE: 0.516, Spearman $r = 0.6730$).

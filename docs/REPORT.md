@@ -75,10 +75,10 @@ We indexed **15,000 resolved historical Amazon conversations** from the Train pa
 ## 5. Escalation Decision Gatekeeper
 
 Operational performance across the 200 Golden Evaluation Set:
-- **Total Automation Rate**: **64.5%** (129 / 200 cases auto-handled)
-- **Total Escalation Rate**: **35.5%** (71 / 200 cases sent to human)
+- **Total Automation Rate**: **59.5%** (119 / 200 cases auto-handled)
+- **Total Escalation Rate**: **40.5%** (81 / 200 cases sent to human)
 - **CRITICAL: False Auto-Handle Rate**: **3.00%** (6 / 200 risky cases missed)
-- **False Escalation Rate**: **29.50%** (59 / 200 benign queries sent to human)
+- **False Escalation Rate**: **34.50%** (69 / 200 benign queries sent to human)
 
 The escalation policy enforces safe behavior: when in doubt, it prefers bothering a human representative rather than hallucinating an unauthorized policy promise.
 
@@ -134,3 +134,19 @@ Our strongest headline result:
 3. **Sentiment & Toxicity Scoring for Escalation**: Augment regex risk detection with an open-source toxicity model to reliably catch abusive, angry, or sarcastic customer tweets.
 4. **Multi-Brand Benchmark**: Run the identical pipeline on `@AppleSupport` and `@SpotifyCares` to empirically measure cross-domain transferability.
 5. **Human-in-the-Loop Active Learning**: Add a feedback webhook where human agents correcting a false auto-handle automatically queue the sample for model re-training.
+
+---
+
+## 9. Citations & References
+
+The following datasets, models, and open-source libraries were utilized in this system:
+
+| Resource / Component | Source & Citation | Exact Role in This Project | What We Wrote / Customized |
+| :--- | :--- | :--- | :--- |
+| **Raw Dataset** | *Customer Support on Twitter* (`twcs.csv`) by `thoughtvector` (Kaggle) | Raw multi-brand customer service conversations. | Wrote custom conversation thread reconstruction, parent-child linking, brand filtering (`@AmazonHelp`), and text sanitization in `src/data/`. |
+| **NLI Cross-Encoder** | `facebook/bart-large-mnli` (Lewis et al., 2019) via HuggingFace `transformers` | Zero-shot intent categorization on Google Colab T4 GPU. | Designed hypothesis templates combining customer issue and brand resolution for ground truth context; engineered batching & FP16 execution (`docs/NLI_INTENT_TAGGING.md`). |
+| **Sentence Embeddings** | `sentence-transformers/all-MiniLM-L6-v2` (Wang et al., 2020 / Reimers & Gurevych, 2019) | 384-dimensional dense semantic representations. | Built calibrated Logistic Regression classification head on top of frozen embeddings; trained on balanced 6,000-sample subset (`src/classification/`). |
+| **Vector Similarity Index** | `FAISS` (`faiss-cpu`, Johnson et al., 2019, Meta AI) | High-speed C++ inner product vector similarity engine (`IndexFlatIP`). | Built the **Intent-Aware Partitioning Layer** where FAISS searches are strictly segmented into 8 intent buckets to prevent cross-domain pollution (`src/retrieval/indexer.py`). |
+| **Generative LLM** | `Google Gemini 3.6 Flash` (`google-genai` SDK) | Grounded response draft generation citing historical precedents. | Authored negative-constraint system prompts (zero URL hallucination, brand voice `^AH`), multi-model fallback cascade, and offline precedent synthesizer (`src/generation/generator.py`). |
+| **Classical ML & Metrics** | `scikit-learn` (Pedregosa et al., 2011) | TF-IDF vectorization, LogisticRegression, precision/recall/F1, Spearman correlation. | Custom grid-search harness executing 134 tuning runs across regularization parameters and feature caps (`scripts/hyperparam_tuning.py`). |
+| **LLM-as-a-Judge Design Pattern** | MT-Bench / G-Eval inspired (Zheng et al., 2023) | Multi-criteria automated evaluation rubric. | Engineered 5-criteria e-commerce customer support rubric (Groundedness, Relevance, Helpfulness, Brand Consistency, Safety) calibrated against human scores (`evaluation/llm_judge.py`). |

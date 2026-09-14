@@ -51,27 +51,43 @@ Instead of looking for words, **Natural Language Inference (NLI)** tests if Stat
 
 ---
 
-## 4. Google Colab Environment & Hardware Setup
+## 4. Google Colab Environment & Step-by-Step Execution Guide
 
-> 🔗 **Interactive Notebook**: You can open, inspect, and run the pipeline directly at:  
-> **[Google Colab Notebook (facebook/bart-large-mnli)](https://colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH?usp=sharing)**
+You can inspect, modify, and run the entire 50,000 tagging pipeline directly in your browser on Google Colab:
 
-| Parameter | Value |
-| :--- | :--- |
-| **Notebook Link** | **[colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH](https://colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH?usp=sharing)** |
-| **Runtime Hardware** | **Google Colab Nvidia T4 GPU (16 GB VRAM)** |
-| **CUDA / Torch** | PyTorch with CUDA 12.x |
-| **Precision** | **FP16 (`torch.float16`)** for 2.5x throughput and 50% VRAM reduction |
-| **Model** | **`facebook/bart-large-mnli`** (406M parameters) |
-| **Pipeline Batch Size** | **128 conversations per batch** |
-| **Input File** | `amazon_conversations.jsonl` (50,000 multi-turn pairs) |
-| **Output File** | `amazon_conversations_nli_tagged.jsonl` (with `nli_intent` and `nli_confidence`) |
+> 🔗 **Public Colab Link**: **[Open in Google Colab (facebook/bart-large-mnli)](https://colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH?usp=sharing)**
+
+### Step-by-Step Instructions to Run on Colab:
+1. **Open the Notebook**: Click the link above to open the notebook in Google Colab.
+2. **Enable Free GPU**:
+   - In the top menu, go to **Runtime** $\rightarrow$ **Change runtime type**.
+   - Under **Hardware accelerator**, select **T4 GPU**.
+   - Click **Save**.
+3. **Upload the Data**:
+   - Open the Files panel on the left sidebar (folder icon).
+   - Drag and drop `data/processed/amazon_conversations.jsonl` into the files area.
+4. **Execute the Tagging Pipeline**:
+   - Click **Runtime** $\rightarrow$ **Run all** (or press `Ctrl + F9`).
+   - The script loads `facebook/bart-large-mnli` in FP16 precision, batches conversations in chunks of 128, and prints progress via `tqdm`.
+   - On a free T4 GPU, processing takes ~15–20 minutes for all 50,000 conversations.
+5. **Download the Tagged Dataset**:
+   - Once finished, the output file `amazon_conversations_nli_tagged.jsonl` is written to disk with predicted intents and confidence scores.
+   - You can download it directly from the Colab file tree or via the automatic download cell.
+
+| Parameter | Specification | Purpose |
+| :--- | :--- | :--- |
+| **Notebook Link** | **[colab.research.google.com/...](https://colab.research.google.com/drive/1lc8ZfsMPl5A9FmtpACezWHQ_cfHGZYmH?usp=sharing)** | Free one-click cloud reproduction |
+| **GPU Accelerator** | **Nvidia T4 (16 GB VRAM)** | High-throughput tensor computation |
+| **Precision Mode** | **FP16 (`torch.float16`)** | Cuts memory in half, speeds up inference 2.5x |
+| **Batch Size** | **128 conversations / batch** | Saturates GPU memory without out-of-memory (OOM) errors |
+| **Input Source** | `amazon_conversations.jsonl` | 50,000 clean multi-turn tweet pairs |
+| **Output Target** | `amazon_conversations_nli_tagged.jsonl` | Tagged dataset with `nli_intent` & `nli_confidence` |
 
 ---
 
-## 5. Exact Google Colab Pipeline Code
+## 5. Exact Google Colab Pipeline Code (Code Walkthrough)
 
-Below is the complete, self-contained Python script executed in Google Colab to tag the 50,000 conversations:
+Below is the complete, self-contained Python script executed in Google Colab. It handles GPU verification, pipeline initialization with FP16, batching, and saving the tagged dataset:
 
 ```python
 import json

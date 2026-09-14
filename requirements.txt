@@ -1,17 +1,20 @@
-﻿# Core ML & NLP
+# Core ML, Embeddings & Vector Search
 scikit-learn>=1.4.0
 sentence-transformers>=2.5.0
 faiss-cpu>=1.7.4
+joblib>=1.3.0
 numpy>=1.26.0
 pandas>=2.2.0
+scipy>=1.12.0
 
-# LLM & Evaluation
+# LLM APIs & Generation
 google-genai>=0.1.0
 openai>=1.12.0
+
+# Environment & Config
 python-dotenv>=1.0.0
 pyyaml>=6.0.1
 tqdm>=4.66.0
-scipy>=1.12.0
 
-# Web Demo
+# Web Dashboard
 streamlit>=1.31.0
