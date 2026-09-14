@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14 02:09:03",
+  "timestamp": "2026-09-14 12:49:36",
   "brand": "AmazonHelp",
   "dataset": "Customer Support on Twitter (twcs)",
   "golden_set_size": 200,
@@ -19,6 +19,56 @@
         "accuracy": 0.675,
         "macro_f1": 0.6706,
         "weighted_f1": 0.6706
+      },
+      "per_class": {
+        "account_prime_billing": {
+          "precision": 0.8148,
+          "recall": 0.88,
+          "f1-score": 0.8462,
+          "support": 25
+        },
+        "cancellation_change_order": {
+          "precision": 0.4783,
+          "recall": 0.44,
+          "f1-score": 0.4583,
+          "support": 25
+        },
+        "damaged_defective_item": {
+          "precision": 0.4783,
+          "recall": 0.44,
+          "f1-score": 0.4583,
+          "support": 25
+        },
+        "delivery_issue": {
+          "precision": 0.7308,
+          "recall": 0.76,
+          "f1-score": 0.7451,
+          "support": 25
+        },
+        "feedback_complaint": {
+          "precision": 0.6296,
+          "recall": 0.68,
+          "f1-score": 0.6538,
+          "support": 25
+        },
+        "general_inquiry_greeting": {
+          "precision": 0.5217,
+          "recall": 0.48,
+          "f1-score": 0.5,
+          "support": 25
+        },
+        "product_tech_support": {
+          "precision": 0.7931,
+          "recall": 0.92,
+          "f1-score": 0.8519,
+          "support": 25
+        },
+        "return_refund_status": {
+          "precision": 0.9091,
+          "recall": 0.8,
+          "f1-score": 0.8511,
+          "support": 25
+        }
       }
     },
     "retrieval": {
@@ -45,15 +95,20 @@
       "false_auto_handle_count": 6,
       "false_auto_handle_rate": 0.03,
       "false_escalation_count": 69,
-      "false_escalation_rate": 0.345
+      "false_escalation_rate": 0.345,
+      "tn": 113,
+      "fp": 69,
+      "fn": 6,
+      "tp": 12
     },
     "human_vs_judge_agreement": {
       "sample_size": 50,
       "spearman_correlation": 0.673,
+      "p_value": 8.577647977579561e-08,
       "mean_absolute_error": 0.516,
       "mean_human_score": 4.52,
       "mean_judge_score": 4.39
     }
   },
-  "runtime_seconds": 51.44
+  "runtime_seconds": 54.39
 }

@@ -119,7 +119,11 @@ def evaluate_escalation_system(
         "false_auto_handle_count": fn,
         "false_auto_handle_rate": false_auto_rate,
         "false_escalation_count": fp,
-        "false_escalation_rate": false_esc_rate
+        "false_escalation_rate": false_esc_rate,
+        "tn": int(tn),
+        "fp": int(fp),
+        "fn": int(fn),
+        "tp": int(tp)
     }
 
 if __name__ == "__main__":
